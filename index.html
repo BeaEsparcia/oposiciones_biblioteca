@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oposiciones Bibliotecas C1 — Entrenador de Legislación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    
+    <!-- Header Principal -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="brand">
+          <span class="brand-badge">C1</span>
+          <span class="brand-title">Oposiciones Bibliotecas</span>
+        </div>
+        <div class="header-actions">
+          <button id="btn-header-home" class="btn-text" style="display: none;">
+            ← Panel Principal
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENEDOR DE PANTALLAS -->
+    <main class="main-content">
+      
+      <!-- 1. PANTALLA DE INICIO -->
+      <section id="view-home" class="view active">
+        <div class="home-hero">
+          <span class="hero-eyebrow">Preparación Técnica • Escala C1</span>
+          <h1 class="hero-title">Estudio Consciente de Legislación</h1>
+          <p class="hero-desc">
+            Espacio sereno para el dominio técnico de la normativa bibliotecaria. Selecciona el modo de entrenamiento adecuado para tu sesión de estudio.
+          </p>
+        </div>
+
+        <!-- Tarjeta del Módulo Activo -->
+        <div class="card source-card">
+          <div class="source-header">
+            <span class="badge badge-primary">Módulo Activo</span>
+            <span id="badge-module-count" class="badge badge-lavender">35 Preguntas Calibradas</span>
+          </div>
+          <h2 class="source-title">Ley 3/2011, de 24 de febrero</h2>
+          <p class="source-subtitle">de la Lectura y de las Bibliotecas de Castilla-La Mancha</p>
+          <div class="source-meta">
+            <span class="meta-pill">🏛️ Castilla-La Mancha</span>
+            <span class="meta-pill">📑 55 Artículos</span>
+            <span class="meta-pill">⚖️ Nivel C1</span>
+          </div>
+        </div>
+
+        <!-- SECCIÓN: MODOS DE ENTRENAMIENTO (4 MODOS) -->
+        <div class="modes-section">
+          <h3 class="section-title">Modos de Entrenamiento</h3>
+          
+          <div class="modes-grid">
+            
+            <!-- MODO 1: Entrenar -->
+            <div class="mode-card">
+              <div class="mode-card-header">
+                <span class="mode-icon">📖</span>
+                <span class="badge badge-primary">10 preguntas</span>
+              </div>
+              <div class="mode-card-body">
+                <h4>1. Entrenar</h4>
+                <p>Sesión estándar con muestreo equilibrado de toda la Ley 3/2011 y corrección inmediata con artículo y explicación.</p>
+              </div>
+              <button id="btn-start-session" class="btn btn-primary btn-block">
+                Iniciar Entrenamiento →
+              </button>
+            </div>
+
+            <!-- MODO 2: Repasar Fallos -->
+            <div class="mode-card">
+              <div class="mode-card-header">
+                <span class="mode-icon">🔄</span>
+                <span id="badge-error-count" class="badge badge-warning">0 pendientes</span>
+              </div>
+              <div class="mode-card-body">
+                <h4>2. Repasar Fallos</h4>
+                <p>Práctica focalizada exclusivamente en las preguntas que tienes pendientes en tu banco de errores.</p>
+              </div>
+              <button id="btn-start-review" class="btn btn-secondary btn-block" disabled>
+                Repasar Fallos
+              </button>
+            </div>
+
+            <!-- MODO 3: Por Bloques Temáticos -->
+            <div class="mode-card">
+              <div class="mode-card-header">
+                <span class="mode-icon">📑</span>
+                <span class="badge badge-neutral">Por categorías</span>
+              </div>
+              <div class="mode-card-body">
+                <h4>3. Por Bloques</h4>
+                <p>Estudia un bloque o Título concreto de la Ley 3/2011 según su clasificación temática original.</p>
+                <div class="block-select-wrapper">
+                  <select id="select-block-category" class="custom-select">
+                    <!-- Opciones de categorías inyectadas dinámicamente -->
+                  </select>
+                </div>
+              </div>
+              <button id="btn-start-block" class="btn btn-secondary btn-block">
+                Estudiar Bloque →
+              </button>
+            </div>
+
+            <!-- MODO 4: Simulacro C1 -->
+            <div class="mode-card">
+              <div class="mode-card-header">
+                <span class="mode-icon">⏱️</span>
+                <span class="badge badge-lavender">20 preguntas</span>
+              </div>
+              <div class="mode-card-body">
+                <h4>4. Simulacro C1</h4>
+                <p>Examen de 20 preguntas con corrección diferida: comprueba tus resultados y fallos al finalizar la sesión.</p>
+              </div>
+              <button id="btn-start-simulacro" class="btn btn-primary btn-block">
+                Comenzar Simulacro →
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Métricas Globales Acumuladas -->
+        <div class="stats-footer">
+          <div class="stat-item">
+            <span class="stat-label">Preguntas respondidas</span>
+            <span id="stat-total-answered" class="stat-value">0</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-label">Precisión global</span>
+            <span id="stat-accuracy" class="stat-value">0%</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-label">En banco de fallos</span>
+            <span id="stat-stored-errors" class="stat-value">0</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. PANTALLA DE QUIZ -->
+      <section id="view-quiz" class="view">
+        <div class="quiz-header">
+          <div class="quiz-info-row">
+            <div class="source-tag">
+              <span id="quiz-mode-badge" class="quiz-mode-badge">Entrenamiento</span>
+              <span class="separator">•</span>
+              <span id="quiz-category" class="quiz-category-tag">Competencias</span>
+            </div>
+            <div id="quiz-counter" class="quiz-counter">Pregunta 1 de 10</div>
+          </div>
+          <div class="progress-bar-container">
+            <div id="quiz-progress-bar" class="progress-bar-fill" style="width: 10%;"></div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Pregunta con retroalimentación integrada -->
+        <div class="card question-card">
+          <h2 id="question-text" class="question-title">Texto de la pregunta...</h2>
+          
+          <div id="options-container" class="options-list">
+            <!-- Las 4 opciones se inyectan dinámicamente -->
+          </div>
+
+          <!-- Botón de navegación directo para modo Simulacro (cuando feedbackCard está oculta) -->
+          <div id="simulacro-actions" class="simulacro-actions" style="display: none;">
+            <button id="btn-simulacro-next" class="btn btn-primary">
+              Siguiente Pregunta →
+            </button>
+          </div>
+
+          <!-- Bloque de Retroalimentación Inmediata Integrado (Modos 1, 2 y 3) -->
+          <div id="feedback-card" class="feedback-card" style="display: none;">
+            <div class="feedback-header">
+              <div id="feedback-status-badge" class="badge badge-success">✓ Correcta</div>
+              <div class="feedback-ref">
+                <span class="ref-label">Fundamento legal:</span>
+                <strong id="feedback-legal-ref">Art. 16</strong>
+              </div>
+            </div>
+            
+            <div class="feedback-body">
+              <p id="feedback-explanation">Explicación jurídica detallada...</p>
+            </div>
+
+            <div class="feedback-actions">
+              <button id="btn-next-question" class="btn btn-primary">
+                Continuar a la Siguiente Pregunta →
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. PANTALLA DE RESULTADOS -->
+      <section id="view-results" class="view">
+        <div class="results-summary-card card">
+          <span id="results-mode-title" class="results-eyebrow">Sesión Finalizada</span>
+          <h1 id="results-score-title" class="results-score">8 / 10</h1>
+          <p id="results-message" class="results-message">Excelente trabajo de asimilación normativa.</p>
+          
+          <div class="results-stats-row">
+            <div class="result-pill pill-success">
+              <span class="pill-num" id="results-correct-count">8</span>
+              <span class="pill-txt">Aciertos</span>
+            </div>
+            <div class="result-pill pill-error">
+              <span class="pill-num" id="results-error-count">2</span>
+              <span class="pill-txt">Fallos</span>
+            </div>
+            <div class="result-pill pill-neutral">
+              <span class="pill-num" id="results-percentage">80%</span>
+              <span class="pill-txt">Precisión</span>
+            </div>
+          </div>
+
+          <!-- Banner informativo del banco de errores -->
+          <div id="results-error-banner" class="results-error-banner" style="display: none;">
+            📌 Has acumulado <strong id="results-error-banner-count">0</strong> preguntas pendientes en tu <strong>Banco de Repaso</strong>.
+          </div>
+
+          <div class="results-actions">
+            <button id="btn-results-review-errors" class="btn btn-secondary" style="display: none;">
+              Repasar los fallos de esta sesión ahora
+            </button>
+            <button id="btn-results-new-session" class="btn btn-primary">
+              Iniciar Otra Sesión
+            </button>
+            <button id="btn-results-go-home" class="btn btn-text">
+              Volver al Panel Principal
+            </button>
+          </div>
+        </div>
+
+        <!-- Desglose de Preguntas -->
+        <div class="breakdown-section">
+          <h3 class="breakdown-title">Desglose Detallado con Justificación Jurídica</h3>
+          <div id="breakdown-list" class="breakdown-list">
+            <!-- Desglose inyectado dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <p>Entrenador personal para Oposiciones de Bibliotecas • Nivel C1 • Ley 3/2011 de Castilla-La Mancha</p>
+    </footer>
+
+  </div>
+
+  <!-- Scripts modulares autónomos -->
+  <script src="js/data/ley_3_2011_clm.js"></script>
+  <script src="js/data/index.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
