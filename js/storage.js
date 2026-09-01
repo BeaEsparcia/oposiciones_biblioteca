@@ -14,7 +14,7 @@ let memoryStore = {
   stats: { totalAnswered: 0, totalCorrect: 0, totalIncorrect: 0, sessionsCompleted: 0 }
 };
 
-export const StorageManager = {
+const StorageManager = {
   /**
    * Obtiene la lista de IDs de preguntas falladas
    * @returns {string[]}

@@ -33,7 +33,7 @@ function prepareQuestionWithOptionsShuffled(rawQuestion) {
   };
 }
 
-export const QuestionEngine = {
+const QuestionEngine = {
   /**
    * Obtiene la lista única de categorías/bloques temáticos existentes
    * en el banco de datos sin reclasificar ni inventar categorías.
