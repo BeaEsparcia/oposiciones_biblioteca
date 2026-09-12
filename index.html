@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Oposiciones Bibliotecas C1 — Entrenador de Legislación</title>
+  
+  <!-- PWA & Mobile Web App Meta Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#b85d3b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Oposiciones Biblioteca">
+  
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -296,5 +310,20 @@
   <script src="js/storage.js" charset="UTF-8"></script>
   <script src="js/engine.js" charset="UTF-8"></script>
   <script src="js/app.js" charset="UTF-8"></script>
+  
+  <!-- Registro de Service Worker para soporte PWA Offline / Standalone -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('Service Worker registrado correctamente:', reg.scope);
+          })
+          .catch((err) => {
+            console.log('Fallo al registrar Service Worker:', err);
+          });
+      });
+    }
+  </script>
 </body>
 </html>

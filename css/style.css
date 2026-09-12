@@ -84,7 +84,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 1.5rem;
+  padding: env(safe-area-inset-top, 0px) max(1.5rem, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(1.5rem, env(safe-area-inset-left, 0px));
 }
 
 /* Header */
