@@ -79,7 +79,7 @@ body {
 
 /* App Container */
 .app-container {
-  max-width: 820px;
+  max-width: 840px;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -152,7 +152,7 @@ body {
 
 /* 1. HOME SCREEN */
 .home-hero {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .hero-eyebrow {
@@ -176,16 +176,67 @@ body {
 }
 
 .hero-desc {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
-  max-width: 650px;
+  max-width: 680px;
   line-height: 1.6;
 }
 
+/* Source Selector Pills */
+.source-selector-section {
+  margin-bottom: 1.25rem;
+}
+
+.source-selector-header {
+  margin-bottom: 0.5rem;
+}
+
+.selector-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.source-pills-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.source-pill {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: var(--font-sans);
+}
+
+.source-pill:hover {
+  background: var(--bg-warm-highlight);
+  border-color: var(--terracotta-border);
+  color: var(--text-main);
+}
+
+.source-pill.active {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(184, 93, 59, 0.2);
+}
+
+/* Active Source Card */
 .source-card {
   background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-warm-highlight) 100%);
   border: 1px solid var(--terracotta-border);
   margin-bottom: 2.25rem;
+  transition: all 0.2s ease;
 }
 
 .source-header {
@@ -201,10 +252,11 @@ body {
   font-weight: 600;
   color: var(--text-main);
   margin-bottom: 0.25rem;
+  line-height: 1.35;
 }
 
 .source-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
   margin-bottom: 1rem;
 }
@@ -483,6 +535,17 @@ body {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.quiz-source-badge {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
 .quiz-mode-badge {

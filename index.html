@@ -37,22 +37,43 @@
           <span class="hero-eyebrow">Preparación Técnica • Escala C1</span>
           <h1 class="hero-title">Estudio Consciente de Legislación</h1>
           <p class="hero-desc">
-            Espacio sereno para el dominio técnico de la normativa bibliotecaria. Selecciona el modo de entrenamiento adecuado para tu sesión de estudio.
+            Espacio sereno para el dominio técnico de la normativa bibliotecaria. Selecciona la fuente normativa y el modo de entrenamiento para tu sesión.
           </p>
         </div>
 
-        <!-- Tarjeta del Módulo Activo -->
-        <div class="card source-card">
+        <!-- SELECTOR DE FUENTES NORMATIVAS -->
+        <div class="source-selector-section">
+          <div class="source-selector-header">
+            <span class="selector-label">Módulo de Estudio Activo:</span>
+          </div>
+          <div class="source-pills-nav" id="source-pills-container">
+            <button class="source-pill active" data-source-id="all">
+              🌐 Todo el Temario
+            </button>
+            <button class="source-pill" data-source-id="ley_3_2011_clm">
+              📑 Ley 3/2011 (CLM)
+            </button>
+            <button class="source-pill" data-source-id="decreto_33_2018_clm">
+              📜 Decreto 33/2018 (RBP-CLM)
+            </button>
+            <button class="source-pill" data-source-id="reglamento_albacete_2022">
+              🏢 Reglamento Albacete (2022)
+            </button>
+          </div>
+        </div>
+
+        <!-- Tarjeta Informativa del Módulo Activo -->
+        <div class="card source-card" id="active-source-card">
           <div class="source-header">
-            <span class="badge badge-primary">Módulo Activo</span>
+            <span id="badge-source-jurisdiction" class="badge badge-primary">Castilla-La Mancha</span>
             <span id="badge-module-count" class="badge badge-lavender">35 Preguntas Calibradas</span>
           </div>
-          <h2 class="source-title">Ley 3/2011, de 24 de febrero</h2>
-          <p class="source-subtitle">de la Lectura y de las Bibliotecas de Castilla-La Mancha</p>
-          <div class="source-meta">
-            <span class="meta-pill">🏛️ Castilla-La Mancha</span>
-            <span class="meta-pill">📑 55 Artículos</span>
-            <span class="meta-pill">⚖️ Nivel C1</span>
+          <h2 id="source-card-title" class="source-title">Ley 3/2011, de 24 de febrero</h2>
+          <p id="source-card-subtitle" class="source-subtitle">de la Lectura y de las Bibliotecas de Castilla-La Mancha</p>
+          <div class="source-meta" id="source-card-meta">
+            <span class="meta-pill" id="meta-pill-ref">📑 DOCM núm. 46 (08/03/2011)</span>
+            <span class="meta-pill" id="meta-pill-structure">⚖️ 55 Artículos</span>
+            <span class="meta-pill">🎯 Nivel C1</span>
           </div>
         </div>
 
@@ -70,7 +91,7 @@
               </div>
               <div class="mode-card-body">
                 <h4>1. Entrenar</h4>
-                <p>Sesión estándar con muestreo equilibrado de toda la Ley 3/2011 y corrección inmediata con artículo y explicación.</p>
+                <p>Sesión estándar con muestreo equilibrado de la norma activa y corrección inmediata con artículo y explicación.</p>
               </div>
               <button id="btn-start-session" class="btn btn-primary btn-block">
                 Iniciar Entrenamiento →
@@ -100,7 +121,7 @@
               </div>
               <div class="mode-card-body">
                 <h4>3. Por Bloques</h4>
-                <p>Estudia un bloque o Título concreto de la Ley 3/2011 según su clasificación temática original.</p>
+                <p>Estudia un bloque o Título concreto según su clasificación temática original en la norma activa.</p>
                 <div class="block-select-wrapper">
                   <select id="select-block-category" class="custom-select">
                     <!-- Opciones de categorías inyectadas dinámicamente -->
@@ -154,6 +175,8 @@
         <div class="quiz-header">
           <div class="quiz-info-row">
             <div class="source-tag">
+              <span id="quiz-source-name" class="quiz-source-badge">Ley 3/2011</span>
+              <span class="separator">•</span>
               <span id="quiz-mode-badge" class="quiz-mode-badge">Entrenamiento</span>
               <span class="separator">•</span>
               <span id="quiz-category" class="quiz-category-tag">Competencias</span>
@@ -256,13 +279,15 @@
     </main>
 
     <footer class="app-footer">
-      <p>Entrenador personal para Oposiciones de Bibliotecas • Nivel C1 • Ley 3/2011 de Castilla-La Mancha</p>
+      <p>Entrenador personal para Oposiciones de Bibliotecas • Nivel C1 • Normativa Estatal, Autonómica y Local</p>
     </footer>
 
   </div>
 
-  <!-- Scripts modulares autónomos -->
+  <!-- Scripts modulares autónomos con carga UTF-8 explícita -->
   <script src="js/data/ley_3_2011_clm.js" charset="UTF-8"></script>
+  <script src="js/data/decreto_33_2018_clm.js" charset="UTF-8"></script>
+  <script src="js/data/reglamento_albacete_2022.js" charset="UTF-8"></script>
   <script src="js/data/index.js" charset="UTF-8"></script>
   <script src="js/storage.js" charset="UTF-8"></script>
   <script src="js/engine.js" charset="UTF-8"></script>

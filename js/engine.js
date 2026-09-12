@@ -1,9 +1,9 @@
 /**
  * Motor Dinámico de Generación y Calibración de Preguntas (QuestionEngine)
- * Soporta los 4 modos de entrenamiento:
+ * Soporta múltiples fuentes normativas y los 4 modos de entrenamiento:
  * 1. Entrenar (Estándar 10 Q)
  * 2. Repasar fallos (Banco de errores)
- * 3. Por bloques temáticos (Categorías originales del banco)
+ * 3. Por bloques temáticos (Categorías de la norma activa)
  * 4. Simulacro C1 (20 Q con corrección diferida)
  */
 
@@ -35,12 +35,12 @@ function prepareQuestionWithOptionsShuffled(rawQuestion) {
 
 const QuestionEngine = {
   /**
-   * Obtiene la lista única de categorías/bloques temáticos existentes
-   * en el banco de datos sin reclasificar ni inventar categorías.
+   * Obtiene la lista única de categorías/bloques temáticos
+   * para una fuente concreta o para todas las fuentes.
    */
-  getCategories(sourceId = 'ley_3_2011_clm') {
+  getCategories(sourceId = 'all') {
     const allQuestions = window.OposicionesData 
-      ? window.OposicionesData.getAllQuestions() 
+      ? window.OposicionesData.getAllQuestions(sourceId) 
       : (window.LEY_3_2011_CLM?.questions || []);
 
     const categoriesSet = new Set();
@@ -48,15 +48,23 @@ const QuestionEngine = {
       if (q.category) categoriesSet.add(q.category);
     });
 
+    // Si la fuente no tiene preguntas aún pero tiene categorías definidas en su esquema
+    if (categoriesSet.size === 0 && sourceId && sourceId !== 'all' && window.OposicionesData) {
+      const src = window.OposicionesData.getSourceById(sourceId);
+      if (src && src.categories) {
+        src.categories.forEach(c => categoriesSet.add(c));
+      }
+    }
+
     return [...categoriesSet];
   },
 
   /**
    * MODO 1: Entrenar (Sesión estándar equilibrada de 10 preguntas)
    */
-  generateSession(sourceId = 'ley_3_2011_clm', targetCount = 10) {
+  generateSession(sourceId = 'all', targetCount = 10) {
     const allQuestions = window.OposicionesData 
-      ? window.OposicionesData.getAllQuestions() 
+      ? window.OposicionesData.getAllQuestions(sourceId) 
       : (window.LEY_3_2011_CLM?.questions || []);
 
     if (!allQuestions || allQuestions.length === 0) return [];
@@ -114,9 +122,9 @@ const QuestionEngine = {
   /**
    * MODO 3: Por bloques temáticos (Utiliza exactamente la categoría indicada)
    */
-  generateBlockSession(categoryName, targetCount = 10) {
+  generateBlockSession(categoryName, sourceId = 'all', targetCount = 10) {
     const allQuestions = window.OposicionesData 
-      ? window.OposicionesData.getAllQuestions() 
+      ? window.OposicionesData.getAllQuestions(sourceId) 
       : (window.LEY_3_2011_CLM?.questions || []);
 
     const filtered = allQuestions.filter(q => q.category === categoryName);
@@ -131,7 +139,7 @@ const QuestionEngine = {
   /**
    * MODO 4: Simulacro C1 (Examen amplio de 20 preguntas)
    */
-  generateSimulacroSession(sourceId = 'ley_3_2011_clm', targetCount = 20) {
+  generateSimulacroSession(sourceId = 'all', targetCount = 20) {
     return this.generateSession(sourceId, targetCount);
   }
 };

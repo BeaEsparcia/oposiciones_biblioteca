@@ -1,9 +1,9 @@
 /**
  * Oposiciones Bibliotecas C1 — Aplicación Principal
- * Soporte integral para los 4 modos de estudio:
+ * Soporte para múltiples fuentes normativas y los 4 modos de estudio:
  * 1. Entrenar (10 Q)
  * 2. Repasar Fallos (Banco de errores)
- * 3. Por Bloques (Categorías existentes)
+ * 3. Por Bloques (Categorías de la norma activa)
  * 4. Simulacro C1 (20 Q con corrección diferida)
  */
 
@@ -11,6 +11,7 @@
 const AppState = {
   currentView: 'home', // 'home' | 'quiz' | 'results'
   currentMode: 'standard', // 'standard' | 'review' | 'block' | 'simulacro'
+  activeSourceId: 'all', // 'all' | 'ley_3_2011_clm' | 'decreto_33_2018_clm' | 'reglamento_albacete_2022'
   activeCategory: null,
   activeQuestions: [],
   currentIndex: 0,
@@ -29,19 +30,28 @@ const DOM = {
   // Header
   btnHeaderHome: document.getElementById('btn-header-home'),
   
-  // Pantalla Inicio
+  // Selector de Fuentes
+  sourcePillsContainer: document.getElementById('source-pills-container'),
+  badgeSourceJurisdiction: document.getElementById('badge-source-jurisdiction'),
+  badgeModuleCount: document.getElementById('badge-module-count'),
+  sourceCardTitle: document.getElementById('source-card-title'),
+  sourceCardSubtitle: document.getElementById('source-card-subtitle'),
+  metaPillRef: document.getElementById('meta-pill-ref'),
+  metaPillStructure: document.getElementById('meta-pill-structure'),
+
+  // Pantalla Inicio - Acciones
   btnStartSession: document.getElementById('btn-start-session'),
   btnStartReview: document.getElementById('btn-start-review'),
   btnStartBlock: document.getElementById('btn-start-block'),
   btnStartSimulacro: document.getElementById('btn-start-simulacro'),
   selectBlockCategory: document.getElementById('select-block-category'),
-  badgeModuleCount: document.getElementById('badge-module-count'),
   badgeErrorCount: document.getElementById('badge-error-count'),
   statTotalAnswered: document.getElementById('stat-total-answered'),
   statAccuracy: document.getElementById('stat-accuracy'),
   statStoredErrors: document.getElementById('stat-stored-errors'),
 
   // Pantalla Quiz
+  quizSourceName: document.getElementById('quiz-source-name'),
   quizModeBadge: document.getElementById('quiz-mode-badge'),
   quizCategory: document.getElementById('quiz-category'),
   quizCounter: document.getElementById('quiz-counter'),
@@ -78,9 +88,48 @@ const DOM = {
 // --- INICIALIZACIÓN ---
 function init() {
   bindEvents();
+  updateActiveSourceUI();
   populateBlockCategories();
   updateHomeStats();
   switchView('home');
+}
+
+// --- ACTUALIZAR INFORMACIÓN DE LA FUENTE ACTIVA ---
+function updateActiveSourceUI() {
+  const sourceId = AppState.activeSourceId;
+
+  // Actualizar clases activas en los botones de fuente
+  if (DOM.sourcePillsContainer) {
+    const pills = DOM.sourcePillsContainer.querySelectorAll('.source-pill');
+    pills.forEach(pill => {
+      const pId = pill.getAttribute('data-source-id');
+      pill.classList.toggle('active', pId === sourceId);
+    });
+  }
+
+  if (sourceId === 'all') {
+    const allQuestions = window.OposicionesData ? window.OposicionesData.getAllQuestions() : [];
+    DOM.badgeSourceJurisdiction.textContent = 'Temario Completo';
+    DOM.badgeModuleCount.textContent = `${allQuestions.length} Preguntas Disponibles`;
+    DOM.sourceCardTitle.textContent = 'Todas las Fuentes Normativas';
+    DOM.sourceCardSubtitle.textContent = 'Ley 3/2011 • Decreto 33/2018 • Reglamento Bibliotecas Albacete 2022';
+    DOM.metaPillRef.textContent = '📚 3 Fuentes Normativas';
+    DOM.metaPillStructure.textContent = '⚖️ Autonómica y Local';
+  } else {
+    const src = window.OposicionesData ? window.OposicionesData.getSourceById(sourceId) : null;
+    if (src) {
+      const qCount = src.questions ? src.questions.length : 0;
+      DOM.badgeSourceJurisdiction.textContent = src.jurisdiction || src.category;
+      DOM.badgeModuleCount.textContent = qCount > 0 ? `${qCount} Preguntas Calibradas` : 'Estructura Lista (En Preparación)';
+      DOM.sourceCardTitle.textContent = src.shortTitle || src.title;
+      DOM.sourceCardSubtitle.textContent = src.title;
+      DOM.metaPillRef.textContent = src.officialReference ? `📑 ${src.officialReference}` : '📑 Publicación Oficial';
+      DOM.metaPillStructure.textContent = src.structureSummary ? `⚖️ ${src.structureSummary}` : '⚖️ Nivel C1';
+    }
+  }
+
+  // Actualizar categorías del selector de bloques
+  populateBlockCategories();
 }
 
 // --- POBLAR SELECTOR DE BLOQUES TEMÁTICOS ---
@@ -88,7 +137,18 @@ function populateBlockCategories() {
   if (!DOM.selectBlockCategory) return;
   DOM.selectBlockCategory.innerHTML = '';
 
-  const categories = window.QuestionEngine.getCategories('ley_3_2011_clm');
+  const categories = window.QuestionEngine.getCategories(AppState.activeSourceId);
+  
+  if (categories.length === 0) {
+    const opt = document.createElement('option');
+    opt.value = '';
+    opt.textContent = 'Sin categorías disponibles para esta fuente';
+    DOM.selectBlockCategory.appendChild(opt);
+    DOM.btnStartBlock.disabled = true;
+    return;
+  }
+
+  DOM.btnStartBlock.disabled = false;
   categories.forEach(cat => {
     const opt = document.createElement('option');
     opt.value = cat;
@@ -109,6 +169,18 @@ function bindEvents() {
       switchView('home');
     }
   });
+
+  // Selector de Fuentes
+  if (DOM.sourcePillsContainer) {
+    DOM.sourcePillsContainer.addEventListener('click', (e) => {
+      const pill = e.target.closest('.source-pill');
+      if (pill) {
+        const sourceId = pill.getAttribute('data-source-id');
+        AppState.activeSourceId = sourceId;
+        updateActiveSourceUI();
+      }
+    });
+  }
 
   // 1. Modo Entrenar
   DOM.btnStartSession.addEventListener('click', () => startSession('standard'));
@@ -204,11 +276,6 @@ function updateHomeStats() {
   const stats = window.StorageManager.getGlobalStats();
   const failedIds = window.StorageManager.getFailedQuestionIds();
 
-  const allQs = window.OposicionesData ? window.OposicionesData.getAllQuestions() : (window.LEY_3_2011_CLM?.questions || []);
-  if (DOM.badgeModuleCount) {
-    DOM.badgeModuleCount.textContent = `${allQs.length} Preguntas Calibradas`;
-  }
-
   DOM.statTotalAnswered.textContent = stats.totalAnswered;
   
   const accuracy = stats.totalAnswered > 0 
@@ -236,9 +303,16 @@ function startSession(mode, param = null) {
   AppState.sessionResults = [];
   AppState.activeCategory = param;
 
+  const currentSource = AppState.activeSourceId;
+
   if (mode === 'standard') {
-    // Modo 1: Entrenar (10 Q equilibradas)
-    AppState.activeQuestions = window.QuestionEngine.generateSession('ley_3_2011_clm', 10);
+    // Modo 1: Entrenar (10 Q equilibradas de la fuente activa)
+    AppState.activeQuestions = window.QuestionEngine.generateSession(currentSource, 10);
+    if (AppState.activeQuestions.length === 0) {
+      alert('Esta fuente normativa todavía no tiene preguntas cargadas en el banco.');
+      switchView('home');
+      return;
+    }
   } else if (mode === 'review') {
     // Modo 2: Repasar Fallos
     const failedIds = window.StorageManager.getFailedQuestionIds();
@@ -250,15 +324,20 @@ function startSession(mode, param = null) {
     AppState.activeQuestions = window.QuestionEngine.generateReviewSession(failedIds);
   } else if (mode === 'block') {
     // Modo 3: Por Bloques
-    AppState.activeQuestions = window.QuestionEngine.generateBlockSession(param, 10);
+    AppState.activeQuestions = window.QuestionEngine.generateBlockSession(param, currentSource, 10);
     if (AppState.activeQuestions.length === 0) {
-      alert('No se encontraron preguntas para este bloque.');
+      alert('No se encontraron preguntas cargadas para este bloque temático.');
       switchView('home');
       return;
     }
   } else if (mode === 'simulacro') {
     // Modo 4: Simulacro C1 (20 Q corrección al final)
-    AppState.activeQuestions = window.QuestionEngine.generateSimulacroSession('ley_3_2011_clm', 20);
+    AppState.activeQuestions = window.QuestionEngine.generateSimulacroSession(currentSource, 20);
+    if (AppState.activeQuestions.length === 0) {
+      alert('Esta fuente normativa todavía no tiene preguntas cargadas en el banco.');
+      switchView('home');
+      return;
+    }
   }
 
   switchView('quiz');
@@ -283,7 +362,7 @@ function renderCurrentQuestion() {
   const q = AppState.activeQuestions[AppState.currentIndex];
   AppState.currentQuestion = q;
 
-  // Header del Quiz según modo
+  // Header del Quiz según modo y fuente
   const total = AppState.activeQuestions.length;
   const currentNum = AppState.currentIndex + 1;
   DOM.quizCounter.textContent = `Pregunta ${currentNum} de ${total}`;
@@ -291,9 +370,11 @@ function renderCurrentQuestion() {
   const progressPct = (currentNum / total) * 100;
   DOM.quizProgressBar.style.width = `${progressPct}%`;
 
+  DOM.quizSourceName.textContent = q.sourceTitle || 'Ley 3/2011';
+
   if (AppState.currentMode === 'simulacro') {
     DOM.quizModeBadge.textContent = 'Simulacro C1 (Examen)';
-    DOM.quizCategory.textContent = '20 Preguntas';
+    DOM.quizCategory.textContent = `${total} Preguntas`;
   } else if (AppState.currentMode === 'review') {
     DOM.quizModeBadge.textContent = 'Repaso de Fallos';
     DOM.quizCategory.textContent = q.category || 'General';
@@ -414,7 +495,7 @@ function renderFeedback(isCorrect, question) {
     DOM.feedbackStatusBadge.textContent = '✗ Respuesta Incorrecta';
   }
 
-  DOM.feedbackLegalRef.textContent = question.lawReference || 'Ley 3/2011';
+  DOM.feedbackLegalRef.textContent = question.lawReference || 'Norma aplicable';
   DOM.feedbackExplanation.textContent = question.explanation;
 
   const isLast = AppState.currentIndex === AppState.activeQuestions.length - 1;
@@ -520,7 +601,7 @@ function renderBreakdown() {
 
     item.innerHTML = `
       <div class="breakdown-item-header">
-        <span class="breakdown-num">Pregunta ${index + 1} • ${res.question.category}</span>
+        <span class="breakdown-num">Pregunta ${index + 1} • ${res.question.sourceTitle || 'Norma'} • ${res.question.category}</span>
         ${statusBadge}
       </div>
       <div class="breakdown-question">${res.question.question}</div>

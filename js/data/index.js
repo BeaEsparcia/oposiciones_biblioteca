@@ -1,30 +1,51 @@
 /**
  * Registro central y agregador de fuentes de estudio.
+ * Permite gestionar múltiples normas jurídicas de forma modular e independiente.
  */
 
 const DataRegistry = {
   get SOURCES() {
-    if (typeof window !== 'undefined' && window.LEY_3_2011_CLM) {
-      return [window.LEY_3_2011_CLM];
+    const sources = [];
+    if (typeof window !== 'undefined') {
+      if (window.LEY_3_2011_CLM) sources.push(window.LEY_3_2011_CLM);
+      if (window.DECRETO_33_2018_CLM) sources.push(window.DECRETO_33_2018_CLM);
+      if (window.REGLAMENTO_ALBACETE_2022) sources.push(window.REGLAMENTO_ALBACETE_2022);
     }
-    return [];
+    return sources;
   },
 
   getSourceById(sourceId) {
     return this.SOURCES.find(s => s.id === sourceId) || null;
   },
 
-  getAllQuestions() {
-    return this.SOURCES.flatMap(s => s.questions.map(q => ({
+  getAllQuestions(sourceId = null) {
+    const activeSources = sourceId && sourceId !== 'all' 
+      ? this.SOURCES.filter(s => s.id === sourceId)
+      : this.SOURCES;
+
+    return activeSources.flatMap(s => s.questions.map(q => ({
       ...q,
       sourceId: s.id,
-      sourceTitle: s.shortTitle
+      sourceTitle: s.shortTitle,
+      sourceFullName: s.title
     })));
   },
 
   getQuestionById(questionId) {
     const all = this.getAllQuestions();
     return all.find(q => q.id === questionId) || null;
+  },
+
+  getSourcesSummary() {
+    return this.SOURCES.map(s => ({
+      id: s.id,
+      title: s.title,
+      shortTitle: s.shortTitle,
+      jurisdiction: s.jurisdiction,
+      category: s.category,
+      officialReference: s.officialReference,
+      questionCount: s.questions ? s.questions.length : 0
+    }));
   }
 };
 
