@@ -112,9 +112,9 @@ function updateActiveSourceUI() {
     DOM.badgeSourceJurisdiction.textContent = 'Temario Completo';
     DOM.badgeModuleCount.textContent = `${allQuestions.length} Preguntas Disponibles`;
     DOM.sourceCardTitle.textContent = 'Todas las Fuentes Normativas';
-    DOM.sourceCardSubtitle.textContent = 'Ley 3/2011 • Decreto 33/2018 • Reglamento Bibliotecas Albacete 2022';
-    DOM.metaPillRef.textContent = '📚 3 Fuentes Normativas';
-    DOM.metaPillStructure.textContent = '⚖️ Autonómica y Local';
+    DOM.sourceCardSubtitle.textContent = 'Ley 10/2007 • Ley 3/2011 • Decreto 33/2018 • Reglamento Bibliotecas Albacete 2022';
+    DOM.metaPillRef.textContent = '📚 4 Fuentes Normativas';
+    DOM.metaPillStructure.textContent = '⚖️ Estatal, Autonómica y Local';
   } else {
     const src = window.OposicionesData ? window.OposicionesData.getSourceById(sourceId) : null;
     if (src) {
