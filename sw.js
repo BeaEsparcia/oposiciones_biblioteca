@@ -4,13 +4,14 @@
  * la versión más reciente en línea y funcionamiento autónomo offline.
  */
 
-const CACHE_NAME = 'oposiciones-biblioteca-v1';
+const CACHE_NAME = 'oposiciones-biblioteca-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './css/style.css',
   './manifest.json',
   './js/data/ley_10_2007.js',
+  './js/data/ley_23_2011.js',
   './js/data/ley_3_2011_clm.js',
   './js/data/decreto_33_2018_clm.js',
   './js/data/reglamento_albacete_2022.js',
