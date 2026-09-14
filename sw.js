@@ -4,7 +4,7 @@
  * la versión más reciente en línea y funcionamiento autónomo offline.
  */
 
-const CACHE_NAME = 'oposiciones-biblioteca-v3';
+const CACHE_NAME = 'oposiciones-biblioteca-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -28,6 +28,12 @@ const ASSETS_TO_CACHE = [
   './icons/icon-maskable-192.png',
   './icons/icon-maskable-512.png'
 ];
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -65,7 +71,7 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       })
       .catch(() => {
-        return caches.match(event.request).then((cachedResponse) => {
+        return caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           }
