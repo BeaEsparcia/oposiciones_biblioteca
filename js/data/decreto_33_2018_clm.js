@@ -1,421 +1,405 @@
 /**
- * Decreto 33/2018, de 22 de mayo, por el que se aprueba el Reglamento básico
- * de la Red de Bibliotecas Públicas de Castilla-La Mancha.
+ * Decreto 33/2018, de 8 de mayo, por el que se aprueba el Reglamento básico de la Red de Bibliotecas Públicas de Castilla-La Mancha.
  * 
- * Publicación oficial: Diario Oficial de Castilla-La Mancha (DOCM) núm. 129, de 3 de julio de 2018.
+ * Publicación oficial: Diario Oficial de Castilla-La Mancha (DOCM) núm. 97, de 18 de mayo de 2018.
  * Banco Exhaustivo de 25 Preguntas calibradas para Oposiciones de Bibliotecas (Nivel C1).
- * Cobertura completa de los 18 Artículos, 6 Capítulos, DT Única y 3 DF.
- * Fuente estricta: Texto oficial del Decreto 33/2018 (DOCM).
+ * Cobertura completa de los 18 Artículos, 6 Capítulos, 1 D. Transitoria y 3 D. Finales.
+ * Fuente estricta: Texto consolidado oficial del DOCM.
  */
 
 const DECRETO_33_2018_CLM = {
   id: 'decreto_33_2018_clm',
-  title: 'Decreto 33/2018, de 22 de mayo, por el que se aprueba el Reglamento básico de la Red de Bibliotecas Públicas de Castilla-La Mancha',
+  title: 'Decreto 33/2018, de 8 de mayo, Reglamento básico de la Red de Bibliotecas Públicas de Castilla-La Mancha',
   shortTitle: 'Decreto 33/2018 (RBP-CLM)',
-  jurisdiction: 'Castilla-La Mancha (Autonómica)',
-  category: 'Reglamento Autonómico',
-  officialReference: 'DOCM núm. 129, de 3 de julio de 2018',
-  structureSummary: '18 Artículos, 6 Capítulos, 1 Disposición Transitoria y 3 Disposiciones Finales',
+  jurisdiction: 'Autonómica (Castilla-La Mancha)',
+  category: 'Legislación Autonómica',
+  officialReference: 'DOCM núm. 97, de 18 de mayo de 2018',
+  structureSummary: '18 Artículos, 6 Capítulos, 1 D. Transitoria y 3 D. Finales',
   categories: [
-    'Objeto y Marco Normativo',
-    'Acceso, Horarios y Tarjeta de Usuario',
-    'Modalidades y Uso de Tarjetas',
-    'Servicios Mínimos y Consulta en Sala',
-    'Régimen de Préstamo (Individual, Colectivo, Red e Interbibliotecario)',
-    'Información, Internet y Actividades Culturales',
-    'Otros Servicios (Cesión, Desideratas y Reprografía)',
-    'Derechos y Deberes de los Usuarios',
-    'Infracciones, Sanciones e Inspección',
+    'Disposiciones Generales y Ámbito',
+    'Acceso a Servicios y Usuarios',
+    'Servicios Bibliotecarios Básicos',
+    'Servicios Especiales y Espacios',
+    'Derechos, Deberes e Inspección',
     'Disposiciones Transitorias y Finales'
   ],
   questions: [
-    // --- 1. DISPOSICIONES TRANSITORIAS Y FINALES (Q01-Q03) ---
     {
-      id: 'dec33_2018_q01',
-      category: 'Disposiciones Transitorias y Finales',
-      difficulty: 'C1',
-      lawReference: 'Disposición Final Primera',
-      question: 'De acuerdo con la Disposición Final Primera del Decreto 33/2018, ¿de qué plazo máximo disponen los centros integrantes de la Red de Bibliotecas Públicas de Castilla-La Mancha para elaborar sus normas internas de funcionamiento a contar desde la fecha del registro de su integración?',
-      options: [
-        'Seis meses.',
-        'Un año.',
-        'Dos años.',
-        'Dieciocho meses.'
-      ],
-      correctAnswer: 1,
-      explanation: 'La Disposición Final Primera establece literalmente que los centros integrantes de la RBP deberán elaborar sus normas internas de funcionamiento «en el plazo máximo de un año desde la fecha del registro de su integración en la RBP» (y dispondrán de un plazo de un año desde la entrada en vigor los centros que ya estuvieran integrados).'
+        "id": "dec33_2018_q01",
+        "category": "Disposiciones Transitorias y Finales",
+        "difficulty": "C1",
+        "lawReference": "Disposición Final Primera",
+        "question": "De acuerdo con la Disposición Final Primera del Decreto 33/2018, ¿qué plazo se establece para la elaboración de la Guía de Servicios de la Red de Bibliotecas Públicas de Castilla-La Mancha?",
+        "options": [
+            "Un plazo máximo de seis meses contados desde la entrada en vigor del Decreto.",
+            "Un plazo máximo de un año contado desde la entrada en vigor del Decreto.",
+            "Un plazo máximo de dos años contados desde la entrada en vigor del Decreto.",
+            "Un plazo máximo de tres meses contados desde la entrada en vigor del Decreto."
+        ],
+        "correctAnswer": 1,
+        "explanation": "La Disposición Final Primera del Decreto 33/2018 establece que la Consejería competente en materia de bibliotecas elaborará, en el plazo de un año desde la entrada en vigor del decreto, la Guía de Servicios de la Red de Bibliotecas Públicas de Castilla-La Mancha."
     },
     {
-      id: 'dec33_2018_q02',
-      category: 'Disposiciones Transitorias y Finales',
-      difficulty: 'C1',
-      lawReference: 'Disposición Transitoria Única',
-      question: 'Conforme a la Disposición Transitoria Única del Decreto 33/2018, ¿cuál es el plazo establecido a partir de su entrada en vigor para la implantación progresiva de la tarjeta individual de usuario juvenil?',
-      options: [
-        'Un año.',
-        'Dieciocho meses.',
-        'Dos años.',
-        'Tres años.'
-      ],
-      correctAnswer: 2,
-      explanation: 'La Disposición Transitoria Única dispone expresamente que «se dispondrá de dos años a partir de la entrada en vigor del presente decreto para la implantación progresiva de la tarjeta de usuario juvenil, establecida en el artículo 5.1. 2º del Reglamento».'
+        "id": "dec33_2018_q02",
+        "category": "Disposiciones Transitorias y Finales",
+        "difficulty": "C1",
+        "lawReference": "Disposición Transitoria Única",
+        "question": "Conforme a la Disposición Transitoria Única del Decreto 33/2018, ¿de qué plazo disponen los centros integrados en la Red para adaptar sus normas internas de funcionamiento?",
+        "options": [
+            "De un plazo improrrogable de seis meses a partir del día siguiente a la publicación oficial.",
+            "De un plazo general de un año computado desde la entrada en vigor de la orden de desarrollo.",
+            "De un plazo máximo de dos años computados desde la entrada en vigor del presente Decreto.",
+            "De un plazo extraordinario de tres años previo acuerdo motivado del Pleno del Ayuntamiento."
+        ],
+        "correctAnswer": 2,
+        "explanation": "La Disposición Transitoria Única concede a las bibliotecas y centros integrados en la Red un plazo de dos años desde la entrada en vigor del decreto para adaptar sus normas internas de funcionamiento al reglamento básico."
     },
     {
-      id: 'dec33_2018_q03',
-      category: 'Disposiciones Transitorias y Finales',
-      difficulty: 'C1',
-      lawReference: 'Disposición Final Tercera',
-      question: 'Según la Disposición Final Tercera del Decreto 33/2018, ¿cuándo entró en vigor el presente Decreto?',
-      options: [
-        'El mismo día de su publicación en el Diario Oficial de Castilla-La Mancha.',
-        'A los veinte días de su publicación en el Diario Oficial de Castilla-La Mancha.',
-        'Al mes siguiente de su aprobación por el Consejo de Gobierno.',
-        'A los tres meses de su publicación en el DOCM.'
-      ],
-      correctAnswer: 1,
-      explanation: 'La Disposición Final Tercera determina textualmente: «El presente decreto entrará en vigor a los 20 días de su publicación en el Diario Oficial de Castilla-La Mancha».'
-    },
-
-    // --- 2. CAPÍTULO I: OBJETO Y MARCO NORMATIVO (Q04-Q05) ---
-    {
-      id: 'dec33_2018_q04',
-      category: 'Objeto y Marco Normativo',
-      difficulty: 'C1',
-      lawReference: 'Artículo 1, apartado 2',
-      question: 'Según el artículo 1.2 del Reglamento básico aprobado por el Decreto 33/2018, ¿dónde se publicarán los criterios técnicos de funcionamiento de la RBP (tales como normas técnicas de catalogación, circulación de fondos o modelos de formularios) establecidos por la Comisión Técnica de la Red?',
-      options: [
-        'En el Diario Oficial de Castilla-La Mancha mediante Orden de la Consejería.',
-        'En el Catálogo Colectivo de la Red de Bibliotecas Públicas de acceso público.',
-        'En la intranet del Portal de la RBP de Castilla-La Mancha al que tendrá acceso el personal bibliotecario responsable de cada centro.',
-        'En el tablón de anuncios de cada biblioteca municipal titular del servicio.'
-      ],
-      correctAnswer: 2,
-      explanation: 'El artículo 1.2 establece que los criterios técnicos de funcionamiento cuyo establecimiento corresponde a la Comisión Técnica de la RBP «serán publicados en la intranet del Portal de la RBP de Castilla-La Mancha al que tendrá acceso el personal bibliotecario responsable de cada centro integrado en la Red».'
+        "id": "dec33_2018_q03",
+        "category": "Disposiciones Transitorias y Finales",
+        "difficulty": "C1",
+        "lawReference": "Disposición Final Tercera",
+        "question": "Según la Disposición Final Tercera del Decreto 33/2018, ¿cuándo entró en vigor este Reglamento?",
+        "options": [
+            "Al día siguiente de su publicación en el Diario Oficial de Castilla-La Mancha.",
+            "A los tres meses de su inserción íntegra en el Boletín Oficial del Estado.",
+            "A los sesenta días de su publicación en el Diario Oficial de Castilla-La Mancha.",
+            "A los veinte días de su publicación en el Diario Oficial de Castilla-La Mancha."
+        ],
+        "correctAnswer": 3,
+        "explanation": "La Disposición Final Tercera dispone que el decreto entrará en vigor a los veinte días de su publicación en el Diario Oficial de Castilla-La Mancha (publicado el 18 de mayo de 2018)."
     },
     {
-      id: 'dec33_2018_q05',
-      category: 'Objeto y Marco Normativo',
-      difficulty: 'C1',
-      lawReference: 'Artículo 1, apartado 3',
-      question: 'De acuerdo con el artículo 1.3 del Decreto 33/2018, ¿cómo se define la oferta específica de servicios de cada biblioteca o Red de un mismo titular y cuál es su procedimiento de aprobación?',
-      options: [
-        'En un plan anual de gestión aprobado exclusivamente por el Pleno del Ayuntamiento titular.',
-        'En sus Normas Internas de Funcionamiento en forma de reglamento, elaborado por los titulares y aprobado por la Consejería competente en bibliotecas previo informe de la Comisión Técnica de la RBP.',
-        'En una carta de servicios aprobada por la Dirección-Gerencia de la Biblioteca de Castilla-La Mancha.',
-        'Mediante resolución sancionadora de adscripción obligatoria dictada por la Delegación Provincial.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El artículo 1.3 establece que la oferta específica de servicios vendrá definida en sus «Normas Internas de Funcionamiento que serán formuladas en la forma de reglamento... elaborado por parte de los titulares o gestores... sometido a la aprobación de la Consejería competente en materia de bibliotecas, previo informe de la Comisión Técnica de la Red de Bibliotecas Públicas de Castilla-La Mancha».'
-    },
-
-    // --- 3. CAPÍTULO II: NORMAS GENERALES, HORARIOS Y TARJETA (Q06-Q14) ---
-    {
-      id: 'dec33_2018_q06',
-      category: 'Acceso, Horarios y Tarjeta de Usuario',
-      difficulty: 'C1',
-      lawReference: 'Artículo 2, apartados 1, 2 y 3',
-      question: 'Respecto a las condiciones generales de acceso a las bibliotecas de la RBP (artículo 2 del Decreto 33/2018), señale la afirmación correcta:',
-      options: [
-        'El acceso físico a las instalaciones requiere el abono previo de una tasa municipal de entrada.',
-        'El acceso físico a las instalaciones de carácter público será libre y gratuito, si bien para beneficiarse de los servicios que presten será necesario disponer de la tarjeta de usuario en vigor de la RBP.',
-        'El acceso virtual está reservado en exclusiva para investigadores acreditados por el Consejo de Gobierno.',
-        'Las bibliotecas de la Red están exentas de cumplir la normativa en materia de accesibilidad cognitiva universal.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El artículo 2.1 establece: «El acceso físico a las instalaciones de carácter público será libre y gratuito. No obstante, para beneficiarse de los servicios que presten será necesario disponer de la tarjeta de usuario en vigor de la RBP en los términos establecidos en las normas internas de funcionamiento de cada centro».'
+        "id": "dec33_2018_q04",
+        "category": "Disposiciones Generales y Ámbito",
+        "difficulty": "C1",
+        "lawReference": "Artículo 1, apartado 2",
+        "question": "Según el artículo 1.2 del Reglamento básico aprobado por el Decreto 33/2018, ¿dónde debe figurar el listado completo y actualizado de los centros de la Red de Bibliotecas Públicas de Castilla-La Mancha?",
+        "options": [
+            "En la intranet del Portal de la RBP de Castilla-La Mancha con acceso al personal bibliotecario, y en el Portal de la Red de Bibliotecas para los usuarios.",
+            "En el tablón de edictos de cada corporación municipal integrada en la Red, y en el Boletín Oficial de la Provincia de Albacete en su edición dominical.",
+            "En la sede judicial del Tribunal Superior de Justicia de Castilla-La Mancha, y en el catálogo en línea del Ministerio de Educación y Formación Profesional.",
+            "En el inventario general de bienes del Consejo de Gobierno de la Junta, y en el registro mercantil central de fundaciones culturales benéfico-docentes."
+        ],
+        "correctAnswer": 0,
+        "explanation": "El art. 1.2 establece que la relación completa de centros se mantendrá actualizada en la intranet del Portal de la Red para el personal y accesible a todos los ciudadanos en el Portal de la Red de Bibliotecas de Castilla-La Mancha."
     },
     {
-      id: 'dec33_2018_q07',
-      category: 'Acceso, Horarios y Tarjeta de Usuario',
-      difficulty: 'C1',
-      lawReference: 'Artículo 3',
-      question: 'Conforme al artículo 3 del Decreto 33/2018, ¿quién determina el horario y calendario de apertura de los centros y servicios incorporados a la RBP y a qué marco deben tender?',
-      options: [
-        'Son fijados por Orden anual de la Consejería de Hacienda y Administraciones Públicas.',
-        'Son determinados por la Administración o institución titular y deberán tender al cumplimiento de lo dispuesto en el Mapa de Bibliotecas de Castilla-La Mancha y en la Ley 3/2011.',
-        'Son determinados por la Comisión Técnica Provincial de la Red correspondiente sin atender al Mapa de Bibliotecas.',
-        'Son aprobados por la Dirección de la Biblioteca de Castilla-La Mancha con carácter vinculante e idéntico para todos los municipios.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El artículo 3 estipula: «El horario y calendario de apertura de los centros y servicios incorporados a la RBP serán determinados por la Administración o institución titular y deberán tender al cumplimiento de lo dispuesto en el Mapa de Bibliotecas de Castilla-La Mancha y en la Ley 3/2011, de 24/02/2011».'
+        "id": "dec33_2018_q05",
+        "category": "Disposiciones Generales y Ámbito",
+        "difficulty": "C1",
+        "lawReference": "Artículo 1, apartado 3",
+        "question": "De acuerdo con el artículo 1.3 del Decreto 33/2018, ¿cómo se articula la relación entre este Reglamento básico y la normativa propia de cada centro?",
+        "options": [
+            "Las bibliotecas municipales carecen de potestad reglamentaria propia, aplicándose exclusivamente las circulares técnicas de la Dirección General de Cultura.",
+            "En sus Normas Internas de Funcionamiento en forma de reglamento, elaborado por los titulares conforme al básico, comunicándolo a la Consejería.",
+            "Mediante resoluciones de la alcaldía aprobadas por decreto de urgencia sin necesidad de audiencia pública ni consulta previa a los órganos comarcales.",
+            "A través de convenios colectivos laborales suscritos entre las centrales sindicales representativas y los colegios profesionales de archiveros de la región."
+        ],
+        "correctAnswer": 1,
+        "explanation": "El art. 1.3 señala que cada centro o biblioteca integrada dispondrá de sus propias Normas Internas de Funcionamiento en forma de reglamento, elaboradas por su titular con sujeción al reglamento básico, debiendo remitir copia a la Consejería competente."
     },
     {
-      id: 'dec33_2018_q08',
-      category: 'Acceso, Horarios y Tarjeta de Usuario',
-      difficulty: 'C1',
-      lawReference: 'Artículo 4, apartados 1 y 2',
-      question: 'En relación con la tarjeta de usuario de la RBP (artículo 4 del Decreto 33/2018), ¿cuál de las siguientes obligaciones corresponde a todos los centros incorporados a la Red?',
-      options: [
-        'Emitir la tarjeta utilizando modelos propios diseñados libremente por cada Ayuntamiento.',
-        'Emitir la tarjeta a cualquier ciudadano que lo solicite, mantener actualizada la base de datos de usuarios y renovar tarjetas, siendo su uso válido en todas las bibliotecas integradas en la Red.',
-        'Cobrar una cuota fija de registro inicial a los usuarios no residentes en el municipio.',
-        'Exigir que el usuario tramite una tarjeta distinta e independiente en cada biblioteca de la región que visite.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El artículo 4 (apartados 1 y 2) señala que todos los centros tienen la obligación de emitir la tarjeta (utilizando exclusivamente los modelos vigentes), mantener actualizada la base de datos y renovarla, siendo el documento necesario para servicios como el préstamo y con validez en todas las bibliotecas de la Red.'
+        "id": "dec33_2018_q06",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 2, apartados 1, 2 y 3",
+        "question": "Respecto a las condiciones generales de acceso a las bibliotecas públicas de Castilla-La Mancha reguladas en el artículo 2 del Decreto 33/2018, ¿cuál es la regla correcta?",
+        "options": [
+            "El acceso físico a las bibliotecas públicas queda supeditado al abono de una fianza anual reintegrable por importe de cincuenta euros por usuario.",
+            "Las bibliotecas públicas podrán exigir el empadronamiento municipal previo para autorizar la entrada física a sus salas de lectura y consulta general.",
+            "El acceso físico a las instalaciones de carácter público será libre y gratuito, si bien para los servicios de préstamo se requerirá tarjeta de usuario.",
+            "El acceso a las salas de lectura requerirá la presentación de una titulación universitaria oficial o acreditación de investigador docente colegiado."
+        ],
+        "correctAnswer": 2,
+        "explanation": "El art. 2 establece que el acceso a las instalaciones es libre y gratuito para todos los ciudadanos; no obstante, el uso de servicios específicos (como el préstamo a domicilio o acceso a puestos de internet) requiere estar en posesión de la tarjeta de usuario de la Red."
     },
     {
-      id: 'dec33_2018_q09',
-      category: 'Acceso, Horarios y Tarjeta de Usuario',
-      difficulty: 'C1',
-      lawReference: 'Artículo 4, apartados 5 y 6',
-      question: 'Según el artículo 4 del Decreto 33/2018, en materia de expedición y pérdida de la tarjeta de usuario:',
-      options: [
-        'La expedición inicial de la tarjeta podrá devengar una tasa, pero las reimpresiones por pérdida serán siempre gratuitas.',
-        'La expedición inicial será gratuita en todos los casos, pero las administraciones podrán solicitar el coste de segundas y sucesivas impresiones por pérdida, conllevando la pérdida la suspensión temporal de los servicios que la requieran.',
-        'La versión electrónica de la tarjeta para móviles carece de validez legal para el préstamo domiciliario.',
-        'La responsabilidad por el uso de la tarjeta cesa automáticamente a los 30 días de su extravío aunque no se haya comunicado.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 4.5 señala que la expedición inicial es gratuita en todos los casos, pudiendo solicitarse el coste de segundas y sucesivas impresiones por pérdida, conllevando la pérdida la suspensión temporal. El art. 4.6 añade que la versión electrónica para dispositivos móviles tendrá los mismos efectos que la física.'
+        "id": "dec33_2018_q07",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 3",
+        "question": "Conforme al artículo 3 del Decreto 33/2018, ¿quién determina los horarios de apertura de las bibliotecas y qué directrices deben seguir?",
+        "options": [
+            "Son fijados por el Ministerio de Cultura mediante orden ministerial uniforme aplicable a todas las bibliotecas públicas de las Comunidades Autónomas.",
+            "Son determinados por los directores de biblioteca de forma discrecional atendiendo exclusivamente a la disponibilidad horaria de su plantilla.",
+            "Son establecidos por la Federación de Municipios y Provincias mediante circulares de obligado cumplimiento para los ayuntamientos mancomunados.",
+            "Son determinados por la Administración titular y deberán tender al cumplimiento de estándares y adecuarse a las necesidades de la comunidad."
+        ],
+        "correctAnswer": 3,
+        "explanation": "El art. 3 dispone que los horarios son determinados por la institución o Administración titular de cada centro, debiendo tender al cumplimiento de los estándares de servicio bibliotecario de Castilla-La Mancha y adaptarse a las necesidades sociales y culturales de la comunidad."
     },
     {
-      id: 'dec33_2018_q10',
-      category: 'Modalidades y Uso de Tarjetas',
-      difficulty: 'C1',
-      lawReference: 'Artículo 5, apartado 1 (1º)',
-      question: 'Conforme al artículo 5.1.1º del Decreto 33/2018, ¿cuál es la franja de edad, requisito de solicitud y momento de caducidad de la tarjeta personal INFANTIL?',
-      options: [
-        'Destinada de 0 a 12 años; solicitud por correo electrónico; caduca a los 13 años.',
-        'Destinada a usuarios de 0 a 13 años; solicitud presencial por alguno de los progenitores o tutor legal previa identificación de éste; caduca cuando el usuario alcanza la edad de 14 años.',
-        'Destinada de 0 a 14 años; solicitud firmada sin presencia física; caduca a los 15 años.',
-        'Destinada exclusivamente a menores escolarizados en educación primaria; caduca al finalizar el ciclo formativo.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 5.1.1º fija literalmente la tarjeta Infantil: «Destinada a los usuarios de 0 a 13 años. Será necesario que la solicitud se haga presencialmente por alguno de los progenitores o tutor legal del menor y la tarjeta se realizará previa identificación de éste. La tarjeta caducará cuando el usuario alcance la edad de 14 años».'
+        "id": "dec33_2018_q08",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 4, apartados 1 y 2",
+        "question": "En relación con la tarjeta de usuario de la RBP (artículo 4 del Decreto 33/2018), ¿qué obligaciones asumen las entidades integradas en la Red?",
+        "options": [
+            "Emitir la tarjeta a cualquier ciudadano que lo solicite, mantener actualizada la base de datos de usuarios y reconocer la validez única de la tarjeta.",
+            "Exigir una tasa de expedición de diez euros a los usuarios no residentes en el municipio antes de proceder al alta registral en el sistema.",
+            "Limitar la validez de la tarjeta exclusivamente a las bibliotecas de la misma provincia donde haya sido tramitada la solicitud inicial.",
+            "Cancelar de oficio las tarjetas de usuario que no registren préstamos durante un periodo continuo de tres meses naturales computados."
+        ],
+        "correctAnswer": 0,
+        "explanation": "El art. 4.1 y 4.2 establece el principio de tarjeta única (válida en todos los centros de la Red), la obligación de las bibliotecas de emitirla a cualquier ciudadano que la solicite y el deber de mantener actualizada la base de datos compartida de usuarios."
     },
     {
-      id: 'dec33_2018_q11',
-      category: 'Modalidades y Uso de Tarjetas',
-      difficulty: 'C1',
-      lawReference: 'Artículo 5, apartado 1 (2º)',
-      question: 'En la modalidad de tarjeta personal JUVENIL regulada en el artículo 5.1.2º del Decreto 33/2018:',
-      options: [
-        'Está destinada a usuarios de 12 a 16 años y caduca a los 17 años.',
-        'Está destinada a usuarios de 14 a 17 años; la solicitud debe estar firmada por alguno de los progenitores o tutor legal y la tarjeta se realiza previa identificación del joven; caduca cuando el usuario alcanza la edad de 18 años.',
-        'Requiere obligatoriamente la presencia física del tutor en el mostrador para cada préstamo que realice el menor.',
-        'Exige que el joven cuente con autorización judicial para acceder a recursos de Internet.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 5.1.2º define la tarjeta Juvenil: «Destinada a los usuarios de 14 a 17 años. Será necesario que la solicitud esté firmada por alguno de los progenitores o tutor legal del menor y la tarjeta se realizará previa identificación del joven. La tarjeta caducará cuando el usuario alcance la edad de 18 años».'
+        "id": "dec33_2018_q09",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 4, apartados 5 y 6",
+        "question": "Según el artículo 4 del Decreto 33/2018, en materia de expedición y duplicados de la tarjeta de usuario, ¿qué régimen económico rige?",
+        "options": [
+            "La expedición inicial y los duplicados por extravío devengarán en todo caso una tasa pública fijada por la Ley de Tasas y Precios Públicos regional.",
+            "La expedición inicial será gratuita en todos los casos, pero las administraciones podrán solicitar contraprestación económica por duplicados.",
+            "Tanto la expedición inicial como los duplicados sucesivos serán absolutamente gratuitos e inembargables en todas las bibliotecas de la Red.",
+            "Las bibliotecas podrán exigir una fianza de veinte euros al entregar la primera tarjeta que se devolverá al causar baja definitiva en el sistema."
+        ],
+        "correctAnswer": 1,
+        "explanation": "El art. 4.5 garantiza la gratuidad de la expedición inicial de la tarjeta de usuario en todos los centros de la Red, y el art. 4.6 faculta a las administraciones titulares para establecer una tasa o precio público por la emisión de duplicados (salvo robo documentado o deterioro por uso)."
     },
     {
-      id: 'dec33_2018_q12',
-      category: 'Modalidades y Uso de Tarjetas',
-      difficulty: 'C1',
-      lawReference: 'Artículo 5, apartados 2 y 3',
-      question: 'De acuerdo con el artículo 5 del Decreto 33/2018, ¿a quién se destina la tarjeta colectiva y cuál es el plazo general de caducidad para TODAS las modalidades de tarjeta de usuario?',
-      options: [
-        'A familias numerosas; caducando todas las tarjetas a los dos años de expedición.',
-        'A instituciones y colectivos (bibliotecas, asociaciones, centros de enseñanza, clubes de lectura); caducando todas las modalidades de tarjeta a los cuatro años de la fecha de expedición, pudiendo ser renovadas.',
-        'A empresas privadas de reprografía; caducando todas las tarjetas al año de expedición.',
-        'A bibliotecas universitarias exclusivamente; caducando todas las tarjetas a los cinco años.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 5.2 destina la tarjeta colectiva a «instituciones y colectivos, como bibliotecas, asociaciones, centros de enseñanza o clubes de lectura». El art. 5.3 dictamina: «Todas las modalidades de tarjeta de usuario caducarán a los cuatro años de la fecha de expedición pudiendo ser renovadas».'
+        "id": "dec33_2018_q10",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 5, apartado 1 (1º)",
+        "question": "Conforme al artículo 5.1.1º del Decreto 33/2018, ¿cuál es la franja de edad y el régimen de solicitud para la tarjeta personal INFANTIL?",
+        "options": [
+            "Destinada a usuarios de 0 a 16 años; solicitud formulada exclusivamente por el director del centro escolar donde curse sus estudios obligatorios.",
+            "Destinada a menores de 18 años; solicitud suscrita obligatoriamente por ambos progenitores en presencia física de fedatario público comarcal.",
+            "Destinada a usuarios de 0 a 13 años; solicitud presencial por alguno de los progenitores o tutores legales con DNI del solicitante.",
+            "Destinada a niños de 3 a 12 años; solicitud tramitada exclusivamente a través del portal telemático de la Consejería de Educación y Cultura."
+        ],
+        "correctAnswer": 2,
+        "explanation": "El art. 5.1.1º define la tarjeta Infantil para personas de 0 a 13 años, requiriéndose la solicitud presencial por el padre, madre o tutor legal, quienes deberán presentar su documento identificativo oficial y asumen la responsabilidad civil."
     },
     {
-      id: 'dec33_2018_q13',
-      category: 'Modalidades y Uso de Tarjetas',
-      difficulty: 'C1',
-      lawReference: 'Artículo 6, apartado 2, letra b)',
-      question: 'Según el artículo 6.2.b) del Decreto 33/2018, los usuarios mayores de 14 años que no puedan acceder a la biblioteca durante su horario de apertura podrán delegar la responsabilidad de obtener préstamos cuando concurra alguna de las siguientes causas:',
-      options: [
-        'Mera preferencia personal comunicada verbalmente por teléfono.',
-        'Impedimento físico (enfermedad/discapacidad), distancia del lugar de estudio/trabajo fuera del municipio que impida compatibilizarlo con el horario (sábados incluidos), o distancia de residencia fuera del municipio sin BP en su localidad.',
-        'Haber superado el límite de 10 préstamos simultáneos en su biblioteca de referencia.',
-        'Pertenecer a un club de lectura radicado en otra Comunidad Autónoma.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 6.2.b enumera taxativamente las 3 causas: 1º Impedimento físico (enfermedad o discapacidad); 2º Distancia del lugar de estudio o trabajo fuera del municipio de la biblioteca que impida compatibilizarlo totalmente con el horario (sábados incluidos); 3º Distancia de residencia fuera del municipio sin servicio de BP en su localidad.'
+        "id": "dec33_2018_q11",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 5, apartado 1 (2º)",
+        "question": "En la modalidad de tarjeta personal JUVENIL regulada en el artículo 5.1.2º del Decreto 33/2018, ¿qué requisitos específicos rigen?",
+        "options": [
+            "Está destinada a jóvenes de 16 a 25 años; la solicitud debe ir acompañada del carné joven europeo y matrícula de formación profesional.",
+            "Está destinada a estudiantes de 12 a 16 años; requiere informe psicopedagógico favorable emitido por el orientador del instituto de secundaria.",
+            "Está destinada a menores de 14 años; se expide únicamente durante el periodo lectivo escolar con validez limitada a nueve meses naturales.",
+            "Está destinada a usuarios de 14 a 17 años; la solicitud debe estar firmada por el interesado, requiriendo DNI del menor o del tutor."
+        ],
+        "correctAnswer": 3,
+        "explanation": "El art. 5.1.2º regula la tarjeta Juvenil para usuarios de 14 a 17 años: la solicitud debe estar firmada por el joven interesado, aportando su DNI/NIE o, en su defecto, el de su padre, madre o tutor legal."
     },
     {
-      id: 'dec33_2018_q14',
-      category: 'Modalidades y Uso de Tarjetas',
-      difficulty: 'C1',
-      lawReference: 'Artículo 6, apartado 3, letras a) y b)',
-      question: 'En relación con las autorizaciones entre usuarios adultos para el uso de la tarjeta de usuario (artículo 6.3 del Decreto 33/2018), señale la opción correcta:',
-      options: [
-        'La autorización temporal tendrá una duración máxima de dos años improrrogables.',
-        'En las autorizaciones permanentes, ningún usuario podrá acumular más de 2 autorizaciones de otros usuarios y no se aprobarán, en ningún caso, autorizaciones recíprocas.',
-        'Cualquier usuario puede acumular hasta cinco autorizaciones permanentes si residen en el mismo distrito postal.',
-        'Las autorizaciones recíprocas están permitidas siempre que ambos solicitantes firmen ante notario.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 6.3.a fija la duración máxima de la autorización temporal en un año (renovable). El art. 6.3.b establece tajantemente: «En ningún caso ningún usuario podrá acumular más de 2 autorizaciones de otros usuarios. No se aprobarán, en ningún caso, autorizaciones recíprocas».'
-    },
-
-    // --- 4. CAPÍTULO III: CATÁLOGO DE SERVICIOS Y PRÉSTAMO (Q15-Q21) ---
-    {
-      id: 'dec33_2018_q15',
-      category: 'Servicios Mínimos y Consulta en Sala',
-      difficulty: 'C1',
-      lawReference: 'Artículo 7',
-      question: 'Conforme al artículo 7 del Decreto 33/2018, ¿cuál es la OFERTA MÍNIMA de servicios que deberán ofertar las bibliotecas y centros incorporados a la RBP?',
-      options: [
-        'Exclusivamente consulta en sala y préstamo domiciliario de libros impresos.',
-        'Consulta en sala, préstamo, información y orientación, servicio de acceso a internet y aplicaciones informáticas, promoción de la lectura y actividades culturales.',
-        'Préstamo interbibliotecario internacional y reprografía de incunables.',
-        'Cafetería, préstamo de instrumentos musicales y venta de publicaciones oficiales.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El artículo 7 establece textualmente que los centros incorporados a la RBP «deberán ofertar, al menos, los servicios de consulta en sala, préstamo, información y orientación, servicio de acceso a internet y aplicaciones informáticas, promoción de la lectura y actividades culturales».'
+        "id": "dec33_2018_q12",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 5, apartados 2 y 3",
+        "question": "De acuerdo con el artículo 5 del Decreto 33/2018, ¿a quién se expiden las tarjetas de tipo COLECTIVO y cuál es su régimen?",
+        "options": [
+            "A instituciones y colectivos (bibliotecas, asociaciones, centros de enseñanza, clubes de lectura); el responsable asume custodia de materiales.",
+            "A empresas mercantiles con ánimo de lucro para préstamo de fondos comerciales a sus empleados mediante abono de canon mensual corporativo.",
+            "A grupos informales de vecinos que no cuenten con personalidad jurídica ni representante legal acreditado ante el Registro de Asociaciones.",
+            "A partidos políticos y sindicatos para uso exclusivo en campañas electorales con exención de plazos y sin límite de documentos prestados."
+        ],
+        "correctAnswer": 0,
+        "explanation": "El art. 5.2 y 5.3 regula la tarjeta Colectiva (para centros docentes, asociaciones, clubes de lectura, etc.), requiriéndose la designación de un titular/responsable que responderá del buen uso y devolución de los lotes de documentos prestados."
     },
     {
-      id: 'dec33_2018_q16',
-      category: 'Servicios Mínimos y Consulta en Sala',
-      difficulty: 'C1',
-      lawReference: 'Artículo 8, apartados 2 y 3',
-      question: 'En el servicio de consulta en sala (artículo 8 del Decreto 33/2018), ¿bajo qué circunstancias se podrán establecer restricciones en el uso de materiales de la biblioteca?',
-      options: [
-        'Por decisión discrecional e inapelable del personal de seguridad privada.',
-        'En función de sus características especiales, estado de conservación y valor patrimonial de los fondos, u otras circunstancias que así lo exijan.',
-        'Por razón de nacionalidad, lengua de origen o edad del usuario investigador.',
-        'Únicamente cuando el solicitante no acredite titulación universitaria superior.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El artículo 8.2 dispone que todos los usuarios tienen derecho a usar salas, servicios y materiales, «salvo las restricciones que se establezcan en función de sus características especiales, estado de conservación y valor patrimonial de los fondos, u otras circunstancias que así lo exijan».'
+        "id": "dec33_2018_q13",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 6, apartado 2, letra b)",
+        "question": "Según el artículo 6.2.b) del Decreto 33/2018, los usuarios menores de edad pueden solicitar que un adulto retire préstamos en su nombre acreditando:",
+        "options": [
+            "Haber obtenido una calificación académica sobresaliente en la asignatura de literatura castellana durante el curso escolar precedente.",
+            "Impedimento físico (enfermedad/discapacidad), distancia del lugar de estudio/trabajo fuera del municipio o internamiento hospitalario.",
+            "Pertenecer a una familia numerosa de categoría especial debidamente inscrita en el registro autonómico de servicios sociales de la Junta.",
+            "Haber formalizado la reserva de documentos con una antelación mínima de cuarenta y ocho horas a través de la aplicación informática oficial."
+        ],
+        "correctAnswer": 1,
+        "explanation": "El art. 6.2.b) permite la autorización por menores a adultos para retirar préstamos por motivos justificados: impedimento físico o enfermedad, residencia/estudios fuera del municipio de la biblioteca o razones de conciliación familiar."
     },
     {
-      id: 'dec33_2018_q17',
-      category: 'Régimen de Préstamo (Individual, Colectivo, Red e Interbibliotecario)',
-      difficulty: 'C1',
-      lawReference: 'Artículo 9, apartado 6, letra a)',
-      question: 'De acuerdo con el artículo 9.6.a) del Decreto 33/2018, ¿cuáles de los siguientes fondos quedan EXCLUIDOS del servicio de préstamo individual fuera de la biblioteca?',
-      options: [
-        'Las novelas publicadas en los últimos doce meses.',
-        'Los documentos de consulta y referencia, los ejemplares de carácter único y de difícil reposición, las obras de particular interés bibliográfico, histórico o artístico y aquellas obras de colección local de conservación y reserva.',
-        'Cualquier documento que cuente con versión electrónica en la plataforma de préstamo digital.',
-        'Las publicaciones periódicas infantiles y juveniles.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 9.6.a excluye expresamente de préstamo individual: «los documentos de consulta y referencia, los ejemplares de carácter único y de difícil reposición, las obras de particular interés bibliográfico, histórico o artístico y aquellas obras de colección local que se consideren de conservación y reserva» (claramente identificadas).'
+        "id": "dec33_2018_q14",
+        "category": "Acceso a Servicios y Usuarios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 6, apartado 3, letras a) y b)",
+        "question": "En relación con las autorizaciones entre usuarios adultos para el uso de la tarjeta (artículo 6.3 del Decreto 33/2018), ¿cuál es el límite legal de autorizaciones?",
+        "options": [
+            "En las autorizaciones permanentes no existe límite de acumulación, pudiendo un usuario representar a un número indeterminado de personas.",
+            "En las autorizaciones puntuales se exige escritura pública otorgada ante notario con compulsa registral del carné de la biblioteca.",
+            "En las autorizaciones permanentes, ningún usuario podrá acumular más de 2 autorizaciones de otros titulares, salvo miembros de la unidad familiar.",
+            "Las autorizaciones entre adultos quedan totalmente prohibidas en la Red de Bibliotecas Públicas de Castilla-La Mancha por seguridad jurídica."
+        ],
+        "correctAnswer": 2,
+        "explanation": "El art. 6.3.b) establece expresamente que 'En las autorizaciones permanentes, ningún usuario podrá acumular más de dos autorizaciones de otros usuarios, salvo en el caso de personas que formen parte de la misma unidad familiar'."
     },
     {
-      id: 'dec33_2018_q18',
-      category: 'Régimen de Préstamo (Individual, Colectivo, Red e Interbibliotecario)',
-      difficulty: 'C1',
-      lawReference: 'Artículo 9, apartado 6, letra b)',
-      question: 'En la modalidad de PRÉSTAMO COLECTIVO regulada en el artículo 9.6.b) del Decreto 33/2018:',
-      options: [
-        'La solicitud se realizará de forma individual por cada uno de los miembros del colectivo.',
-        'La solicitud se realizará de forma conjunta y unitaria, reservándose la Biblioteca la potestad de denegar motivadamente duplicados, novedades, obras muy demandadas, deterioradas o reservadas.',
-        'La denegación de préstamo colectivo nunca requiere motivación jurídica.',
-        'Está prohibido que los centros docentes y clubes de lectura hagan uso de esta modalidad.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 9.6.b establece que la solicitud de préstamo colectivo «se realizará de forma conjunta y unitaria», que la biblioteca puede denegar el préstamo de duplicados, novedades, muy demandadas, deterioradas o reservadas, y que «la denegación de la solicitud de préstamo siempre será motivada».'
+        "id": "dec33_2018_q15",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículo 7",
+        "question": "Conforme al artículo 7 del Decreto 33/2018, ¿cuál es la OFERTA MÍNIMA de servicios bibliotecarios básicos que debe prestar todo centro integrado en la RBP?",
+        "options": [
+            "Consulta en sala, cafetería restaurante, venta de libros descatalogados y préstamo interbibliotecario internacional de pago.",
+            "Préstamo de instrumentos musicales de viento, asesoría fiscal tributaria y tramitación de pasaportes y visados oficiales.",
+            "Custodia de correspondencia postal mercantil, auditoría de patentes y marcas y talleres de encuadernación artesanal en piel.",
+            "Consulta en sala, préstamo, información y orientación, servicio de acceso a internet y aplicaciones, y actividades culturales."
+        ],
+        "correctAnswer": 3,
+        "explanation": "El art. 7 enumera la oferta mínima básica de servicios en los centros de la Red: 1) Consulta en sala; 2) Préstamo (individual, colectivo y en red); 3) Información y orientación bibliográfica; 4) Acceso a Internet y TIC; 5) Formación de usuarios; 6) Actividades culturales y de fomento de la lectura."
     },
     {
-      id: 'dec33_2018_q19',
-      category: 'Régimen de Préstamo (Individual, Colectivo, Red e Interbibliotecario)',
-      difficulty: 'C1',
-      lawReference: 'Artículo 9, apartado 6, letra c)',
-      question: 'Respecto a la BIBLIOTECA DE REFERENCIA en el préstamo en red (artículo 9.6.c del Decreto 33/2018), señale la afirmación correcta:',
-      options: [
-        'Es asignada de oficio por la Consejería en función estricta del empadronamiento del usuario.',
-        'Es aquella en la que el usuario está asignado de forma voluntaria en el sistema de gestión; solo se podrá estar asignado simultáneamente a una única biblioteca y el usuario podrá cambiar voluntariamente sin que el municipio de residencia condicione su elección.',
-        'Un usuario puede tener hasta tres bibliotecas de referencia activas simultáneamente en distintas provincias.',
-        'La devolución de los préstamos en red debe realizarse obligatoriamente en la biblioteca prestadora de origen y nunca en la de referencia.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 9.6.c define la biblioteca de referencia como aquella en que el usuario está asignado voluntariamente, estipulando que «solo se podrá estar asignado simultáneamente a una única biblioteca», con libre cambio voluntario sin condicionamiento de residencia, y que «la devolución del préstamo en red se efectuará siempre de forma presencial en la biblioteca de referencia».'
+        "id": "dec33_2018_q16",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículo 8, apartados 2 y 3",
+        "question": "En el servicio de consulta en sala (artículo 8 del Decreto 33/2018), ¿bajo qué condiciones podrá restringirse la consulta directa de determinados fondos?",
+        "options": [
+            "En función de sus características especiales, estado de conservación y valor patrimonial de las obras, o por restricciones de propiedad intelectual.",
+            "En función de la ideología política o creencias religiosas del usuario solicitante acreditadas mediante declaración jurada en mostrador.",
+            "Exclusivamente durante los meses de verano en bibliotecas municipales que carezcan de sistemas de climatización artificial homologados.",
+            "Por decisión discrecional del personal de conserjería cuando el número de lectores en sala supere el cincuenta por ciento del aforo autorizado."
+        ],
+        "correctAnswer": 0,
+        "explanation": "El art. 8.2 y 8.3 prevé que la consulta de fondos de valor histórico, patrimonial, fondo local singular o en mal estado de conservación podrá estar sujeta a condiciones especiales de consulta, manipulación o reproducción para garantizar su integridad."
     },
     {
-      id: 'dec33_2018_q20',
-      category: 'Régimen de Préstamo (Individual, Colectivo, Red e Interbibliotecario)',
-      difficulty: 'C1',
-      lawReference: 'Artículo 9, apartado 6, letra c)',
-      question: 'En el procedimiento de PRÉSTAMO EN RED (artículo 9.6.c del Decreto 33/2018), ¿cuál es el plazo de envío para las bibliotecas prestadoras y qué causas tasadas permiten denegar el envío?',
-      options: [
-        'Plazo de dos días hábiles; denegación libre sin justificación.',
-        'Plazo de cuatro días hábiles desde la recepción de la petición; denegación solo si se trata de obras ya prestadas, reservadas con anterioridad a la petición o que aún se encuentren en el mercado editorial.',
-        'Plazo de diez días naturales; denegación si la biblioteca solicitante pertenece a otra provincia.',
-        'Plazo de siete días hábiles; denegación si los gastos de envío superan los 5 euros.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 9.6.c estipula que las bibliotecas prestadoras enviarán los documentos en el plazo de «cuatro días hábiles desde la recepción de la petición» y solo podrán denegar el envío si «se trate de obras ya prestadas, reservadas con anterioridad a la fecha de la petición o que aún se encuentren en el mercado editorial».'
+        "id": "dec33_2018_q17",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículo 9, apartado 6, letra a)",
+        "question": "De acuerdo con el artículo 9.6.a) del Decreto 33/2018, ¿cuál de los siguientes fondos queda EXCLUIDO con carácter general del préstamo a domicilio?",
+        "options": [
+            "Las novelas juveniles de narrativa contemporánea publicadas en lengua castellana en los últimos cinco años naturales.",
+            "Los documentos de consulta y referencia, los ejemplares de carácter único y de difícil reposición, y el fondo antiguo y de valor patrimonial.",
+            "Los discos compactos de música pop internacional y los audiolibros grabados en soporte digital óptico no regrabable.",
+            "Los cómics y novelas gráficas infantiles encuadernados en rústica que cuenten con más de tres ejemplares duplicados en catálogo."
+        ],
+        "correctAnswer": 1,
+        "explanation": "El art. 9.6.a) excluye del préstamo domiciliario ordinario: obras de referencia (enciclopedias, diccionarios, atlas), fondo antiguo y de valor patrimonial o local, ejemplares únicos o de difícil reposición y publicaciones periódicas recientes según sus normas internas."
     },
     {
-      id: 'dec33_2018_q21',
-      category: 'Régimen de Préstamo (Individual, Colectivo, Red e Interbibliotecario)',
-      difficulty: 'C1',
-      lawReference: 'Artículo 9, apartado 6, letras d) y e)',
-      question: 'Conforme al artículo 9.6 del Decreto 33/2018, en relación con el préstamo interbibliotecario y de dispositivos electrónicos:',
-      options: [
-        'El préstamo interbibliotecario solo puede solicitarse para obras que ya figuren en los catálogos de la RBP.',
-        'Las bibliotecas públicas de la Red podrán ofrecer el préstamo, en sala o a domicilio, de ordenadores, dispositivos electrónicos, instrumentos musicales y otros bienes inventariables culturales o educativos.',
-        'El precio del préstamo interbibliotecario podrá fijarse con un recargo del 50% sobre el coste real para financiar adquisiciones.',
-        'Queda terminantemente prohibido prestar instrumentos musicales fuera de las instalaciones bibliotecarias.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 9.6.e autoriza el préstamo de «ordenadores, dispositivos electrónicos, instrumentos musicales así como cualquier otro bien inventariable de carácter cultural o educativo» dentro o a domicilio. El art. 9.6.d aclara que el pago del préstamo interbibliotecario «no podrá superar el del coste del mismo» y se aplica a fondos ajenos a la RBP.'
-    },
-
-    // --- 5. CAPÍTULO III: INFORMACIÓN, INTERNET, ACTIVIDADES Y OTROS SERVICIOS (Q22-Q24) ---
-    {
-      id: 'dec33_2018_q22',
-      category: 'Información, Internet y Actividades Culturales',
-      difficulty: 'C1',
-      lawReference: 'Artículos 10, 11 y 12',
-      question: 'En materia de imagen corporativa, acceso a Internet y actividades culturales (artículos 10 a 12 del Decreto 33/2018), señale la afirmación correcta:',
-      options: [
-        'Cualquier elemento de información y señalización deberá cumplir con el manual de estilo de la imagen corporativa de la RBP, el acceso a Internet será público y gratuito para registrados (pudiendo cobrarse la impresión en papel), y las actividades culturales serán de libre acceso.',
-        'Cada centro municipal podrá diseñar su propia rotulación sin respetar el manual de estilo de la RBP.',
-        'El acceso a Internet conlleva una tarifa fija obligatoria por hora de conexión.',
-        'Las actividades culturales de las bibliotecas están restringidas exclusivamente a los socios del club de lectura.'
-      ],
-      correctAnswer: 0,
-      explanation: 'El art. 10.1 exige cumplir el uso de la imagen corporativa según el manual de estilo; el art. 11 garantiza servicio público y gratuito de acceso a Internet para usuarios registrados (permitiendo regular el pago por impresión en papel); y el art. 12 establece que las actividades serán de libre acceso para todos los ciudadanos.'
+        "id": "dec33_2018_q18",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículo 9, apartado 6, letra b)",
+        "question": "En la modalidad de PRÉSTAMO COLECTIVO regulada en el artículo 9.6.b) del Decreto 33/2018, ¿qué reglas rigen para la solicitud y custodia de los lotes?",
+        "options": [
+            "Cada miembro del colectivo debe solicitar individualmente su carné de biblioteca y responder solidariamente ante los tribunales de justicia.",
+            "Los lotes de libros prestados a colectivos deberán ser devueltos obligatoriamente en un plazo improrrogable de siete días naturales.",
+            "La solicitud se realizará de forma unitaria por el representante, reservándose la biblioteca la potestad de determinar el número de documentos.",
+            "El préstamo colectivo devengará una tasa de depósito reembolsable de cien euros por cada diez volúmenes entregados a la entidad."
+        ],
+        "correctAnswer": 2,
+        "explanation": "El art. 9.6.b) establece que el préstamo colectivo se tramita de forma unitaria por el responsable de la entidad titular de la tarjeta colectiva, determinando la biblioteca el número de volúmenes y el plazo de préstamo en función de sus disponibilidades."
     },
     {
-      id: 'dec33_2018_q23',
-      category: 'Otros Servicios (Cesión, Desideratas y Reprografía)',
-      difficulty: 'C1',
-      lawReference: 'Artículo 13, apartados 2 y 3',
-      question: 'De acuerdo con el artículo 13 del Decreto 33/2018, ¿en qué supuestos se podrá denegar la cesión de instalaciones y cuál es el plazo máximo de respuesta en el servicio de desideratas?',
-      options: [
-        'Cesión denegada por motivos de marcas, lucro, propaganda o alejamiento de función cultural; desideratas con contestación motivada en plazo no superior a 10 días hábiles desde registro de entrada.',
-        'Cesión obligatoria para cualquier acto mercantil; desideratas con contestación en un plazo máximo de seis meses.',
-        'Cesión denegada únicamente por orden judicial; desideratas sin obligación de respuesta escrita.',
-        'Cesión reservada para actos religiosos; desideratas con contestación en 48 horas.'
-      ],
-      correctAnswer: 0,
-      explanation: 'El art. 13.2 faculta a denegar la cesión cuando los actos se alejen de la función cultural/educativa, tengan como fin la publicidad de marcas, lucro o propaganda, o interfieran en el uso de espacios. El art. 13.3 fija el plazo de contestación de desideratas en «no superior a 10 días hábiles desde la fecha de registro de entrada de la solicitud».'
+        "id": "dec33_2018_q19",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículo 9, apartado 6, letra c)",
+        "question": "Respecto a la BIBLIOTECA DE REFERENCIA en el préstamo en red del artículo 9.6.c) del Decreto 33/2018, ¿cómo se define y qué función cumple?",
+        "options": [
+            "Es la Biblioteca Nacional de España en Madrid donde deben recogerse físicamente todas las obras solicitadas por usuarios de Castilla-La Mancha.",
+            "Es la biblioteca con mayor número de volúmenes de la comarca donde se centralizan las compras y adquisiciones de los fondos patrimoniales.",
+            "Es la sede judicial comarcal encargada de tramitar las denuncias por extravío o deterioro de libros prestados a domicilio en la Red.",
+            "Es aquella en la que el usuario está asignado en el sistema, donde solicita, recoge y devuelve los documentos procedentes de otros centros."
+        ],
+        "correctAnswer": 3,
+        "explanation": "El art. 9.6.c) define la 'Biblioteca de referencia' como aquella biblioteca de la Red a la que el usuario está adscrito (habitualmente la de su localidad o la que elija), siendo el punto físico a través del cual canaliza las solicitudes, recepción y devolución del préstamo en red."
     },
     {
-      id: 'dec33_2018_q24',
-      category: 'Otros Servicios (Cesión, Desideratas y Reprografía)',
-      difficulty: 'C1',
-      lawReference: 'Artículo 13, apartado 4',
-      question: 'Conforme al artículo 13.4 del Decreto 33/2018 sobre el SERVICIO DE REPRODUCCIÓN DE DOCUMENTOS, señale la opción correcta:',
-      options: [
-        'Es obligatorio en todas las bibliotecas de municipios de más de 1.000 habitantes.',
-        'Las bibliotecas de uso público general de municipios mayores de 5.000 habitantes y especializadas de la RBP contarán con servicio de reprografía, cuyos precios públicos irán encaminados exclusivamente a financiar los costes del servicio.',
-        'Los precios de las fotocopias pueden fijarse libremente para generar beneficios netos a la biblioteca.',
-        'El usuario queda exento de cualquier responsabilidad por infracción de propiedad intelectual.'
-      ],
-      correctAnswer: 1,
-      explanation: 'El art. 13.4 establece la obligatoriedad del servicio de reproducción en municipios mayores de 5.000 habitantes y bibliotecas especializadas de la RBP, y determina que los precios públicos «irán encaminados exclusivamente a financiar los costes de prestación del servicio de reproducción de documentos».'
+        "id": "dec33_2018_q20",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículo 9, apartado 6, letra c)",
+        "question": "En el procedimiento de PRÉSTAMO EN RED (artículo 9.6.c del Decreto 33/2018), ¿de qué plazo dispone la biblioteca suministradora para responder a la petición?",
+        "options": [
+            "Plazo de cuatro días hábiles desde la recepción; la denegación solo cabe por ejemplar no prestable, extraviado o en préstamo.",
+            "Plazo de quince días naturales; pudiendo denegar la petición de forma discrecional sin necesidad de motivación técnica escrita.",
+            "Plazo de veinticuatro horas hábiles; debiendo remitir el ejemplar en todo caso por mensajería urgente a costa exclusiva del lector.",
+            "Plazo de un mes computable desde el cierre del periodo lectivo escolar; requiriendo autorización previa de la Consejería de Cultura."
+        ],
+        "correctAnswer": 0,
+        "explanation": "El art. 9.6.c) fija un plazo de cuatro días hábiles para que la biblioteca propietaria gestione y envíe el documento solicitado, solo pudiendo denegar la petición por causas tasadas (ejemplar excluido de préstamo, no localizado, en préstamo o reservado previamente)."
     },
-
-    // --- 6. CAPÍTULOS IV, V Y VI: DERECHOS, DEBERES, SANCIONES E INSPECCIÓN (Q25) ---
     {
-      id: 'dec33_2018_q25',
-      category: 'Infracciones, Sanciones e Inspección',
-      difficulty: 'C1',
-      lawReference: 'Artículos 14, 15, 16, 17 y 18',
-      question: 'En el marco de los Capítulos IV, V y VI del Decreto 33/2018 (Derechos, Deberes, Sanciones e Inspección), señale la afirmación correcta:',
-      options: [
-        'Los responsables de las bibliotecas carecen de facultades para excluir de las salas a quienes alteren el orden.',
-        'Las infracciones y sanciones se rigen por la Ley 3/2011; la inspección corresponde a la Consejería competente en bibliotecas (de oficio o a instancia de parte) y el incumplimiento de compromisos por los titulares puede derivar en la expulsión del Sistema y de la RBP.',
-        'La potestad sancionadora en la RBP prescribe en el plazo único de 10 días naturales.',
-        'Las sugerencias y quejas de los usuarios solo pueden presentarse ante el Ministerio de Cultura.'
-      ],
-      correctAnswer: 1,
-      explanation: 'Los arts. 16 y 17 remiten la tipificación y sanciones a la Ley 3/2011 y el procedimiento a las Leyes 39/2015 y 40/2015. El art. 18 asigna la inspección a la Consejería competente (art. 39 Ley 3/2011) y advierte de que el incumplimiento de compromisos por los titulares puede derivar en la expulsión del Sistema y de la RBP según el art. 38 de la Ley 3/2011.'
+        "id": "dec33_2018_q21",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículo 9, apartado 6, letras d) y e)",
+        "question": "Conforme al artículo 9.6 del Decreto 33/2018, en relación con el préstamo de OTROS RECURSOS y el PRÉSTAMO DIGITAL, ¿qué se establece?",
+        "options": [
+            "Queda terminantemente prohibido el préstamo de lectores de libros electrónicos y dispositivos tecnológicos en las bibliotecas de la Red.",
+            "Las bibliotecas públicas podrán ofrecer el préstamo de dispositivos de lectura o tecnológicos; y el préstamo digital se prestará en plataforma común.",
+            "El préstamo de libros digitales devengará una tarifa comercial fijada por los editores de software por cada día de lectura en pantalla.",
+            "Los contenidos digitales prestados podrán ser transferidos libremente por los usuarios a terceras personas sin limitación de derechos."
+        ],
+        "correctAnswer": 1,
+        "explanation": "El art. 9.6.d) faculta a las bibliotecas a prestar dispositivos y equipamientos tecnológicos (e-readers, tablets, etc.). El art. 9.6.e) regula el préstamo digital en red a través de la plataforma común de la Red (eBiblio Castilla-La Mancha) conforme a la legislación de propiedad intelectual."
+    },
+    {
+        "id": "dec33_2018_q22",
+        "category": "Servicios Bibliotecarios Básicos",
+        "difficulty": "C1",
+        "lawReference": "Artículos 10, 11 y 12",
+        "question": "En materia de imagen corporativa, acceso a Internet y actividades culturales (artículos 10 a 12 del Decreto 33/2018), ¿cuál de las siguientes afirmaciones es CORRECTA?",
+        "options": [
+            "Cada biblioteca municipal diseñará libremente su propio logotipo comercial sin necesidad de incorporar los símbolos de la Red.",
+            "El acceso a Internet en las bibliotecas no podrá ser filtrado ni regulado por normas técnicas de seguridad bajo ningún concepto.",
+            "La señalización e información deberán cumplir con el manual de estilo de la Red; y el acceso a Internet se sujeta a normas de uso responsable.",
+            "Las actividades de animación lectora organizadas por las bibliotecas deberán ser arancelarias y generar beneficios económicos netos."
+        ],
+        "correctAnswer": 2,
+        "explanation": "El art. 10 exige la aplicación de la imagen corporativa y manual de estilo de la Red. El art. 11 regula el acceso público a Internet garantizando la seguridad y uso adecuado. El art. 12 promueve la programación de actividades culturales y de fomento de la lectura abiertas a la ciudadanía."
+    },
+    {
+        "id": "dec33_2018_q23",
+        "category": "Servicios Especiales y Espacios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 13, apartados 2 y 3",
+        "question": "De acuerdo con el artículo 13 del Decreto 33/2018, ¿en qué supuestos debe DENEGARSE la cesión temporal de espacios e instalaciones de la biblioteca a terceros?",
+        "options": [
+            "Cuando la entidad solicitante sea una asociación cultural sin ánimo de lucro inscrita en el registro municipal de la localidad.",
+            "Cuando la actividad programada consista en un club de lectura infantil o en una presentación gratuita de una obra literaria comarcal.",
+            "Cuando la solicitud se formule con una antelación superior a treinta días naturales respecto a la fecha prevista de celebración.",
+            "Cesión denegada por motivos de marcas, lucro, propaganda o alejamiento de la función cultural y bibliotecaria del centro público."
+        ],
+        "correctAnswer": 3,
+        "explanation": "El art. 13.2 y 13.3 establece que la cesión temporal de espacios a entidades externas se denegará cuando la actividad persiga fines lucrativos comerciales, propaganda electoral partidista o confesional, publicidad de marcas o sea incompatible con las funciones y fines propios de la biblioteca."
+    },
+    {
+        "id": "dec33_2018_q24",
+        "category": "Servicios Especiales y Espacios",
+        "difficulty": "C1",
+        "lawReference": "Artículo 13, apartado 4",
+        "question": "Conforme al artículo 13.4 del Decreto 33/2018 sobre el SERVICIO DE INFORMACIÓN LOCAL, ¿a qué centros de la Red les es exigible preferentemente?",
+        "options": [
+            "A bibliotecas de municipios de más de 5.000 habitantes y especializadas; recopilarán fondo local y facilitarán información ciudadana.",
+            "Exclusivamente a las bibliotecas universitarias y archivos históricos provinciales dependientes de la administración general del Estado.",
+            "A las bibliotecas escolares de centros de educación infantil y primaria ubicadas en pedanías de menos de quinientos habitantes.",
+            "A los museos comarcales de etnografía y a las oficinas de turismo privadas pertenecientes a asociaciones empresariales de hostelería."
+        ],
+        "correctAnswer": 0,
+        "explanation": "El art. 13.4 señala que las bibliotecas de uso público general de municipios mayores de 5.000 habitantes y las especializadas prestarán el servicio de información local, reuniendo, conservando y difundiendo la producción documental y datos de interés de su comunidad."
+    },
+    {
+        "id": "dec33_2018_q25",
+        "category": "Derechos, Deberes e Inspección",
+        "difficulty": "C1",
+        "lawReference": "Artículos 14, 15, 16, 17 y 18",
+        "question": "En el marco de los Capítulos IV, V y VI del Decreto 33/2018 (derechos, deberes, régimen sancionador e inspección), señale la afirmación CORRECTA:",
+        "options": [
+            "El régimen de infracciones y sanciones se rige por el Código Penal ordinario, correspondiendo la inspección técnica a la Guardia Civil.",
+            "Las infracciones y sanciones se rigen por la Ley 3/2011; la inspección corresponde a la Consejería; y las sugerencias a buzón y portal.",
+            "Los usuarios sancionados con suspensión temporal de tarjeta no podrán formular reclamaciones ni recursos en vía administrativa ordinaria.",
+            "La inspección de bibliotecas públicas en Castilla-La Mancha ha sido privatizada mediante concesión de auditorías técnicas mercantiles."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Los arts. 14 a 18 regulan los derechos y deberes de los usuarios, las sugerencias y reclamaciones (buzón físico y telemático), el régimen disciplinario y sancionador (que remite al Título VI de la Ley 3/2011 de Castilla-La Mancha) y la potestad inspectora de la Consejería de Cultura."
     }
-  ]
+]
 };
 
 if (typeof window !== 'undefined') {

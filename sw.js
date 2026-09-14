@@ -4,7 +4,7 @@
  * la versión más reciente en línea y funcionamiento autónomo offline.
  */
 
-const CACHE_NAME = 'oposiciones-biblioteca-v5';
+const CACHE_NAME = 'oposiciones-biblioteca-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
