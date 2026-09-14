@@ -7,6 +7,7 @@ const DataRegistry = {
   get SOURCES() {
     const sources = [];
     if (typeof window !== 'undefined') {
+      if (window.LEY_16_1985_T7) sources.push(window.LEY_16_1985_T7);
       if (window.LEY_10_2007) sources.push(window.LEY_10_2007);
       if (window.LEY_23_2011) sources.push(window.LEY_23_2011);
       if (window.RD_635_2015) sources.push(window.RD_635_2015);

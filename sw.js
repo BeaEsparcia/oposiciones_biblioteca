@@ -4,12 +4,13 @@
  * la versión más reciente en línea y funcionamiento autónomo offline.
  */
 
-const CACHE_NAME = 'oposiciones-biblioteca-v4';
+const CACHE_NAME = 'oposiciones-biblioteca-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './css/style.css',
   './manifest.json',
+  './js/data/ley_16_1985_t7.js',
   './js/data/ley_10_2007.js',
   './js/data/ley_23_2011.js',
   './js/data/rd_635_2015.js',
