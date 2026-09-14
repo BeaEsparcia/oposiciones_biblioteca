@@ -9,6 +9,7 @@ const DataRegistry = {
     if (typeof window !== 'undefined') {
       if (window.LEY_10_2007) sources.push(window.LEY_10_2007);
       if (window.LEY_23_2011) sources.push(window.LEY_23_2011);
+      if (window.RD_635_2015) sources.push(window.RD_635_2015);
       if (window.LEY_3_2011_CLM) sources.push(window.LEY_3_2011_CLM);
       if (window.DECRETO_33_2018_CLM) sources.push(window.DECRETO_33_2018_CLM);
       if (window.REGLAMENTO_ALBACETE_2022) sources.push(window.REGLAMENTO_ALBACETE_2022);
