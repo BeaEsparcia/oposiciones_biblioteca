@@ -4,7 +4,7 @@
  * la versión más reciente en línea y funcionamiento autónomo offline.
  */
 
-const CACHE_NAME = 'oposiciones-biblioteca-v6';
+const CACHE_NAME = 'oposiciones-biblioteca-v7';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -16,6 +16,7 @@ const ASSETS_TO_CACHE = [
   './js/data/rd_635_2015.js',
   './js/data/ley_3_2011_clm.js',
   './js/data/decreto_33_2018_clm.js',
+  './js/data/decreto_136_2012_clm.js',
   './js/data/reglamento_albacete_2022.js',
   './js/data/index.js',
   './js/storage.js',

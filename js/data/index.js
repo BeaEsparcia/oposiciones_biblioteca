@@ -13,6 +13,7 @@ const DataRegistry = {
       if (window.RD_635_2015) sources.push(window.RD_635_2015);
       if (window.LEY_3_2011_CLM) sources.push(window.LEY_3_2011_CLM);
       if (window.DECRETO_33_2018_CLM) sources.push(window.DECRETO_33_2018_CLM);
+      if (window.DECRETO_136_2012_CLM) sources.push(window.DECRETO_136_2012_CLM);
       if (window.REGLAMENTO_ALBACETE_2022) sources.push(window.REGLAMENTO_ALBACETE_2022);
     }
     return sources;
